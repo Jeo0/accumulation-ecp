@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using example5;
+using lesson3___example3;
+using New_POS_Application;
 
-namespace LESSON1
+namespace projectNamin
 {
     internal static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Project());
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+
+
+
+            //Application.Run(new Plesson3_form());
+            //Application.Run(new Pquiz1_form());
+            Application.Run(new Plesson5_form());
+
+
         }
     }
 }
