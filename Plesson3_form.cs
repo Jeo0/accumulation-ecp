@@ -535,13 +535,23 @@ namespace lesson3___example3
         private void setPriceAndAddListbox(double price, object namename){
 
           discountAmountTxtBox.Text = "0.00";
-          priceTxtBox.Text = "550.50";
+          priceTxtBox.Text = price;
           price = Convert.ToDouble(priceTxtBox.Text);
-          displayListBox.Items.Add(namename.Text + " " + priceTxtBox.Text);
+
+          // option 1: for handling
+          if(namename is CheckBox checkBox){
+            displayListBox.Items.Add(checkBox.Text + " " + priceTxtBox.Text);
+          }
+
+          // option 2: direct casting assuming that namename is always a checkbox
+          displayListBox.Items.Add((CheckBox)namename.Text);
+
           quantityTxtBox.Text = "0";
           quantityTxtBox.Focus();
 
         }
+
+
         private void checkBox3_CheckedChanged(object sender, EventArgs e) {
           setPriceAndAddListbox("550.50",checkBox3);
 
