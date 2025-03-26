@@ -1,0 +1,35 @@
+ctrl a, copy -> paste in another project
+
+enhance all
+using:
+	- functions
+	- classes
+
+
+
+
+
+
+====================================================================
+retain all projects
+
+however, replica (another form)
+	- pos 1 
+	- pos 2
+	- payroll
+
+with the use of classes and functions
+
+deadline: before thursday
+
+
++ do the main form (?)
+
+
+================================================
++ install ms sql
++ make sure to test if you can create a table / query
++ take note about the thing u made during initialization (nakadepende sa authentication)
+	- and password and all
+
+

@@ -25,10 +25,13 @@ namespace lesson3___example3
         private bool scanning = false;
         private System.Windows.Forms.Timer timer;
 
-        //codes for declaring a variables that is accessible to the whole
-        //form and can be access for one object to another
+        // codes for declaring a variables that is accessible to the whole
+        // form and can be access for one object to another
         private double total_amount = 0;
         private int total_qty = 0;
+
+        // 
+        string imagePath = "E:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\images-lesson3(POS 2)\\";
 
         public Plesson3_form()
         {
@@ -45,6 +48,23 @@ namespace lesson3___example3
                 ScanQRCode();
             }
         }
+
+
+
+
+        /// <summary>
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// //////////////////////////////////////////
+        /// qrcode functions
         private void ScanQRCode()
         {
             if (qrbox.Image != null)
@@ -73,9 +93,6 @@ namespace lesson3___example3
                 }
             }
         }
-
-
-
 
         private void StartCamera()
         {
@@ -119,11 +136,21 @@ namespace lesson3___example3
                 scanning = false;
             }
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        /// <summary>
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.LightGoldenrodYellow;
@@ -136,27 +163,27 @@ namespace lesson3___example3
             totalQtyTxtBox.Enabled = false;
 
             //codes for inserting image to a picturebox
-            string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
-            pizzaPic1.Image = System.Drawing.Image.FromFile(variable + "d1.jfif");
-            pizzaPic2.Image = System.Drawing.Image.FromFile(variable + "d2.jfif");
-            pizzaPic3.Image = System.Drawing.Image.FromFile(variable + "d3.jfif");
-            pizzaPic4.Image = System.Drawing.Image.FromFile(variable + "d4.jfif");
-            pizzaPic5.Image = System.Drawing.Image.FromFile(variable + "d5.jfif");
-            pizzaPic6.Image = System.Drawing.Image.FromFile(variable + "d6.jfif");
-            pizzaPic7.Image = System.Drawing.Image.FromFile(variable + "d7.jfif");
-            pizzaPic8.Image = System.Drawing.Image.FromFile(variable + "d8.jfif");
-            pizzaPic9.Image = System.Drawing.Image.FromFile(variable + "d9.jfif");
-            pizzaPic10.Image = System.Drawing.Image.FromFile(variable + "d10.jfif");
-            pizzaPic11.Image = System.Drawing.Image.FromFile(variable + "d11.jfif");
-            pizzaPic12.Image = System.Drawing.Image.FromFile(variable + "d12.jfif");
-            pizzaPic13.Image = System.Drawing.Image.FromFile(variable + "d13.jfif");
-            pizzaPic14.Image = System.Drawing.Image.FromFile(variable + "d14.jfif");
-            pizzaPic15.Image = System.Drawing.Image.FromFile(variable + "d15.jfif");
-            pizzaPic16.Image = System.Drawing.Image.FromFile(variable + "d16.jfif");
-            pizzaPic17.Image = System.Drawing.Image.FromFile(variable + "d17.jfif");
-            pizzaPic18.Image = System.Drawing.Image.FromFile(variable + "d18.jfif");
-            pizzaPic19.Image = System.Drawing.Image.FromFile(variable + "d19.jfif");
-            pizzaPic20.Image = System.Drawing.Image.FromFile(variable + "d20.jfif");
+            //string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
+            pizzaPic1.Image = System.Drawing.Image.FromFile(imagePath + "d1.jfif");
+            pizzaPic2.Image = System.Drawing.Image.FromFile(imagePath + "d2.jfif");
+            pizzaPic3.Image = System.Drawing.Image.FromFile(imagePath + "d3.jfif");
+            pizzaPic4.Image = System.Drawing.Image.FromFile(imagePath + "d4.jfif");
+            pizzaPic5.Image = System.Drawing.Image.FromFile(imagePath + "d5.jfif");
+            pizzaPic6.Image = System.Drawing.Image.FromFile(imagePath + "d6.jfif");
+            pizzaPic7.Image = System.Drawing.Image.FromFile(imagePath + "d7.jfif");
+            pizzaPic8.Image = System.Drawing.Image.FromFile(imagePath + "d8.jfif");
+            pizzaPic9.Image = System.Drawing.Image.FromFile(imagePath + "d9.jfif");
+            pizzaPic10.Image = System.Drawing.Image.FromFile(imagePath + "d10.jfif");
+            pizzaPic11.Image = System.Drawing.Image.FromFile(imagePath + "d11.jfif");
+            pizzaPic12.Image = System.Drawing.Image.FromFile(imagePath + "d12.jfif");
+            pizzaPic13.Image = System.Drawing.Image.FromFile(imagePath + "d13.jfif");
+            pizzaPic14.Image = System.Drawing.Image.FromFile(imagePath + "d14.jfif");
+            pizzaPic15.Image = System.Drawing.Image.FromFile(imagePath + "d15.jfif");
+            pizzaPic16.Image = System.Drawing.Image.FromFile(imagePath + "d16.jfif");
+            pizzaPic17.Image = System.Drawing.Image.FromFile(imagePath + "d17.jfif");
+            pizzaPic18.Image = System.Drawing.Image.FromFile(imagePath + "d18.jfif");
+            pizzaPic19.Image = System.Drawing.Image.FromFile(imagePath + "d19.jfif");
+            pizzaPic20.Image = System.Drawing.Image.FromFile(imagePath + "d20.jfif");
 
             //codes to disable to checkboxes
             //A
@@ -177,17 +204,32 @@ namespace lesson3___example3
 
         }
 
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////
         private void FoodBundleAradiobtn_CheckedChanged(object sender, EventArgs e)
         {
             displayListBox.Items.Clear();
-            string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
+            // string imagePath = "E:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\images-lesson3(POS 2)\\";
             double price;
             //code for changing the form background
             this.BackColor = Color.LightCyan;
             //code for food bundle B not to be selected
             FoodBundleBradiobtn.Checked = false;
             //inserting image inside picturebox
-            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb1.jfif");
+            displayPictureBox.Image = System.Drawing.Image.FromFile(imagePath + "fb1.jfif");
             //codes to check the checkboxes for A
             friedchickenCheckBox.Checked = true;
             friesCheckbox.Checked = true;
@@ -212,23 +254,18 @@ namespace lesson3___example3
             quantityTxtBox.Text = "0";
             quantityTxtBox.Focus();
 
-
-
-
-
         }
 
         private void FoodBundleBradiobtn_CheckedChanged(object sender, EventArgs e)
         {
             displayListBox.Items.Clear();
-            string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
             double price;
             //code for changing the form background
             this.BackColor = Color.LightBlue;
             //code for food bundle B not to be selected
             FoodBundleAradiobtn.Checked = false;
             //inserting image inside picturebox
-            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb2.jfif");
+            displayPictureBox.Image = System.Drawing.Image.FromFile(imagePath + "fb2.jfif");
             //codes to check the checkboxes for A
             friedchickenCheckBox.Checked = false;
             friesCheckbox.Checked = false;
@@ -254,6 +291,24 @@ namespace lesson3___example3
             quantityTxtBox.Focus();
         }
 
+
+        /// <summary>
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// /////////////////////////////////////////////////////////
+        /// below shows the unique buttons
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void calcbills_Click_1(object sender, EventArgs e)
         {
@@ -376,8 +431,6 @@ namespace lesson3___example3
 
             displayListBox.Items.Clear();
 
-
-
         }
 
         private void quantityTxtBox_TextChanged(object sender, EventArgs e)
@@ -386,48 +439,42 @@ namespace lesson3___example3
             int qty = 0;
 
             // Ensure input values are not empty before conversion
-            try
-            {
+            try {
                 if (!string.IsNullOrWhiteSpace(priceTxtBox.Text))
                     price = Convert.ToDouble(priceTxtBox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message);
                 priceTxtBox.Focus();
             }
 
-            try
-            {
+
+            try {
                 if (!string.IsNullOrWhiteSpace(quantityTxtBox.Text))
                     qty = Convert.ToInt32(quantityTxtBox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message);
                 quantityTxtBox.Focus();
             }
 
-            try
-            {
+
+            try {
                 if (!string.IsNullOrWhiteSpace(discountAmountTxtBox.Text))
                     discount_amount = Convert.ToDouble(discountAmountTxtBox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message);
                 discountAmountTxtBox.Focus();
             }
 
             // Prevent negative calculations
-            if (qty > 0)
-            {
+            if (qty > 0) {
                 discounted_amount = (price * qty) - (discount_amount * qty);
                 total_qty += qty;
                 total_amount += discounted_amount;
             }
-            else
-            {
+            else {
                 discounted_amount = 0;
             }
 
@@ -460,257 +507,167 @@ namespace lesson3___example3
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
 
-            double price;
+        /// <summary>
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+        private void setPriceAndAddListbox(double price, object namename){
 
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "550.50";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox3.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          discountAmountTxtBox.Text = "0.00";
+          priceTxtBox.Text = "550.50";
+          price = Convert.ToDouble(priceTxtBox.Text);
+          displayListBox.Items.Add(namename.Text + " " + priceTxtBox.Text);
+          quantityTxtBox.Text = "0";
+          quantityTxtBox.Focus();
+
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e) {
+          setPriceAndAddListbox("550.50",checkBox3);
+
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
+        private void checkBox4_CheckedChanged(object sender, EventArgs e) {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "600.99";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox4.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("600.99", checkBox4);
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "750.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox5.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("750.00", checkBox5);
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "500.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox6.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("500.00", checkBox6);
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "750.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox7.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("750.00", checkBox7);
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "700.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox8.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("700.00", checkBox8);
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "850.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox9.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("850.00", checkBox9);
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "450.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox10.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("450.00", checkBox10);
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "650.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox11.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("650.00", checkBox11);
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "575.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox12.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("575.00", checkBox12);
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "565.50";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox13.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("565.50", checkBox13);
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "580.50";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox14.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("580.50", checkBox14);
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "600.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox15.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("600.00", checkBox15);
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
 
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "545.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox16.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("545.00", checkBox16);
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "505.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox17.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("505.00", checkBox17);
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "490.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox18.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("490.00", checkBox18);
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "555.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox19.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("555.00", checkBox19);
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "615.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox20.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("615.00", checkBox20);
         }
 
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "605.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListBox.Items.Add(checkBox21.Text + " " + priceTxtBox.Text);
-            quantityTxtBox.Text = "0";
-            quantityTxtBox.Focus();
+          setPriceAndAddListBox("605.00", checkBox21);
         }
 
-        private void displayListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void discountedAmounttxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////////////////
 
         private void scanqrbtn_Click(object sender, EventArgs e)
         {
@@ -728,9 +685,5 @@ namespace lesson3___example3
             newbtn.Enabled = true;
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
