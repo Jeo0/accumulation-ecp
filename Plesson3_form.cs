@@ -137,6 +137,22 @@ namespace lesson3___example3
             }
         }
 
+        private void scanqrbtn_Click(object sender, EventArgs e)
+        {
+            // Reset the picture box
+            if (qrbox.Image != null)
+            {
+                qrbox.Image.Dispose();
+                qrbox.Image = null;
+            }
+
+            StopCamera();
+            StartCamera();
+            timer.Start();
+
+            newbtn.Enabled = true;
+        }
+
         /// <summary>
         /// ////////////////////////////////////////////////
         /// ////////////////////////////////////////////////
@@ -486,26 +502,6 @@ namespace lesson3___example3
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            //codes to declare a variable with specific data type
-            double price;
-            //codes for putting text property value of the textbox
-            discountAmountTxtBox.Text = "0.00";
-            priceTxtBox.Text = "500.99";
-            //codes to convert string data inside the textbox to numeric data to store
-            //inside the variable
-            price = Convert.ToDouble(priceTxtBox.Text);
-            //codes to insert text property value of a checkbox inside the listbox
-            displayListBox.Items.Add(checkBox2.Text + " " + priceTxtBox.Text);
-            //codes for putting text property value of the textbox
-            quantityTxtBox.Text = "0";
-            //codes for the cursor inside the textbox once the event of the object
-            //triggred
-            quantityTxtBox.Focus();
-
-
-        }
 
 
         /// <summary>
@@ -535,128 +531,131 @@ namespace lesson3___example3
         private void setPriceAndAddListbox(double price, object namename){
 
           discountAmountTxtBox.Text = "0.00";
-          priceTxtBox.Text = price;
-          price = Convert.ToDouble(priceTxtBox.Text);
+          priceTxtBox.Text = Convert.ToString(price);
 
-          // option 1: for handling
-          if(namename is CheckBox checkBox){
+          // option 1: check before typecasting
+          if(namename is System.Windows.Forms.CheckBox checkBox){
             displayListBox.Items.Add(checkBox.Text + " " + priceTxtBox.Text);
           }
 
           // option 2: direct casting assuming that namename is always a checkbox
-          displayListBox.Items.Add((CheckBox)namename.Text);
+          //displayListBox.Items.Add((System.Windows.Forms.CheckBox)namename.Text);
 
           quantityTxtBox.Text = "0";
           quantityTxtBox.Focus();
 
         }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e) {
+            setPriceAndAddListbox(500.99, checkBox2);
+        }
+
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e) {
-          setPriceAndAddListbox("550.50",checkBox3);
+          setPriceAndAddListbox(550.50,checkBox3);
 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e) {
 
-          setPriceAndAddListBox("600.99", checkBox4);
+          setPriceAndAddListbox(600.99, checkBox4);
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("750.00", checkBox5);
+          setPriceAndAddListbox(750.00, checkBox5);
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("500.00", checkBox6);
+          setPriceAndAddListbox(500.00, checkBox6);
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("750.00", checkBox7);
+          setPriceAndAddListbox(750.00, checkBox7);
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("700.00", checkBox8);
+          setPriceAndAddListbox(700.00, checkBox8);
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("850.00", checkBox9);
+          setPriceAndAddListbox(850.00, checkBox9);
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("450.00", checkBox10);
+          setPriceAndAddListbox(450.00, checkBox10);
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("650.00", checkBox11);
+          setPriceAndAddListbox(650.00, checkBox11);
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("575.00", checkBox12);
+          setPriceAndAddListbox(575.00, checkBox12);
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("565.50", checkBox13);
+          setPriceAndAddListbox(565.50, checkBox13);
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("580.50", checkBox14);
+          setPriceAndAddListbox(580.50, checkBox14);
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("600.00", checkBox15);
+          setPriceAndAddListbox(600.00, checkBox15);
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListBox("545.00", checkBox16);
+          setPriceAndAddListbox(545.00, checkBox16);
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListBox("505.00", checkBox17);
+          setPriceAndAddListbox(505.00, checkBox17);
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListBox("490.00", checkBox18);
+          setPriceAndAddListbox(490.00, checkBox18);
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListBox("555.00", checkBox19);
+          setPriceAndAddListbox(555.00, checkBox19);
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListBox("615.00", checkBox20);
+          setPriceAndAddListbox(615.00, checkBox20);
         }
 
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListBox("605.00", checkBox21);
+          setPriceAndAddListbox(605.00, checkBox21);
         }
 
         /// ////////////////////////////////////////////////////////////////////////
@@ -679,21 +678,6 @@ namespace lesson3___example3
         /// ////////////////////////////////////////////////////////////////////////
         /// ////////////////////////////////////////////////////////////////////////
 
-        private void scanqrbtn_Click(object sender, EventArgs e)
-        {
-            // Reset the picture box
-            if (qrbox.Image != null)
-            {
-                qrbox.Image.Dispose();
-                qrbox.Image = null;
-            }
-
-            StopCamera();
-            StartCamera();
-            timer.Start();
-
-            newbtn.Enabled = true;
-        }
 
     }
 }
