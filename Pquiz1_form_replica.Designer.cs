@@ -1,6 +1,6 @@
 ﻿namespace New_POS_Application
 {
-    partial class Pquiz1_form
+    partial class Pquiz1_form_replica
     {
         /// <summary>
         /// Required designer variable.
@@ -196,7 +196,7 @@
             label10.Size = new Size(54, 13);
             label10.TabIndex = 15;
             label10.Text = "Change:";
-            label10.Click += label10_Click;
+            
             // 
             // label9
             // 
@@ -209,7 +209,7 @@
             label9.Size = new Size(98, 13);
             label9.TabIndex = 14;
             label9.Text = "Cash Rendered:";
-            label9.Click += label9_Click;
+            
             // 
             // employee_discount_button
             // 
@@ -801,7 +801,7 @@
             groupBox3.Size = new Size(380, 106);
             groupBox3.TabIndex = 113;
             groupBox3.TabStop = false;
-            groupBox3.Enter += groupBox3_Enter;
+          
             // 
             // groupBox4
             // 
@@ -878,7 +878,7 @@
             groupBox4.TabIndex = 114;
             groupBox4.TabStop = false;
             groupBox4.Text = "Name";
-            groupBox4.Enter += groupBox4_Enter;
+            
             // 
             // qrbox
             // 
@@ -1382,7 +1382,7 @@
             total_discount_txtbox.Name = "total_discount_txtbox";
             total_discount_txtbox.Size = new Size(213, 20);
             total_discount_txtbox.TabIndex = 11;
-            total_discount_txtbox.TextChanged += total_discount_txtbox_TextChanged;
+          
             // 
             // total_quantity_txtbox
             // 

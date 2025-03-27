@@ -46,8 +46,8 @@ namespace lesson3___example3
         private int total_qty = 0;
 
         // change this if on another system
-        // string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
-        string imagePath = "E:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\images-lesson3(POS 2)\\";
+        string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
+       // string imagePath = "E:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\images-lesson3(POS 2)\\";
 
 
         /// //////////////////////////////////////////
@@ -224,7 +224,7 @@ namespace lesson3___example3
               pizzaPic20
             };
             for (int iii=0; iii < pictureboxArr.Length; iii++){
-              pictureboxArr[iii].Image = System.Drawing.Image.FromFile(imagePath + "d" + Convert.ToString(iii+1) + ".jfif");
+              pictureboxArr[iii].Image = System.Drawing.Image.FromFile(variable + "d" + Convert.ToString(iii+1) + ".jfif");
             }
 
             // to disable to checkboxes
@@ -273,7 +273,7 @@ namespace lesson3___example3
             FoodBundleBradiobtn.Checked = false;    // for food bundle B not to be selected
 
             //inserting image inside picturebox
-            displayPictureBox.Image = System.Drawing.Image.FromFile(imagePath + "fb1.jfif");
+            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb1.jfif");
 
             // to check the checkboxes for A
             friedchickenCheckBox.Checked = true;
@@ -310,7 +310,7 @@ namespace lesson3___example3
             this.BackColor = Color.LightBlue;           // for changing the form background
             FoodBundleAradiobtn.Checked = false;        // for food bundle B not to be selected
 
-            displayPictureBox.Image = System.Drawing.Image.FromFile(imagePath + "fb2.jfif");        //inserting image inside picturebox
+            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb2.jfif");        //inserting image inside picturebox
 
             // to check the checkboxes for A
             friedchickenCheckBox.Checked = false;
@@ -467,7 +467,7 @@ namespace lesson3___example3
               checkBox19,
               checkBox20,
               checkBox21
-            }:
+            };
 
             // range-based loop
             // uncheck all the checkboxes
