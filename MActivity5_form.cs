@@ -9,10 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Activity5
-{
-    public partial class MActivity5_form : Form
-    {
+namespace Activity5 {
+    public partial class MActivity5_form : Form {
         //declaration of global variables
         private string picpath;
         private Double basic_netincome = 0.00,
@@ -25,8 +23,7 @@ namespace Activity5
             other_numhrs = 0.00,
             other_rate = 0.00;
 
-        private void cancel_btn_Click(object sender, EventArgs e)
-        {
+        private void cancel_btn_Click(object sender, EventArgs e) {
             //codes for clearing the textboxes
             emp_nuTxtbox.Clear();
             firstnameTxtbox.Clear();
@@ -56,8 +53,7 @@ namespace Activity5
             pagibig_loanTxtbox.Clear();
         }
 
-        private void browse_btn_Click(object sender, EventArgs e)
-        {
+        private void browse_btn_Click(object sender, EventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image File | * .gif; * .jpg; * .png; * .bmp";
             openFileDialog.Title = " Select Employee Picture";
@@ -65,36 +61,30 @@ namespace Activity5
             picpath = openFileDialog.FileName;
             picpathTxtbox.Text = picpath;
 
-            try
-            {
+            try {
                 pictureBox2.Image = Image.FromFile(openFileDialog.FileName);
             }
 
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show("Error: " + asd.Message);
             }
 
         }
 
-        private void exit_btn_Click(object sender, EventArgs e)
-        {
+        private void exit_btn_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void basic_numhrsTxtbox_TextChanged(object sender, EventArgs e)
-        {
+        private void basic_numhrsTxtbox_TextChanged(object sender, EventArgs e) {
             double basic_numhrs = 0, basic_rate = 0, basic_netincome = 0;
 
             // check basic_numhrs
-            try
-            {
+            try {
                 double temp_to_check_basic_numhrs_is_double;
                 temp_to_check_basic_numhrs_is_double = Convert.ToDouble(basic_numhrsTxtbox.Text);
                 basic_numhrs = temp_to_check_basic_numhrs_is_double;
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message + " Make sure it is floating point number");
                 // basic_numhrsTxtbox.Clear();
                 basic_numhrs = 0; // default value if parsing fails
@@ -103,16 +93,13 @@ namespace Activity5
             }
 
             // check basic_rate
-            if (basic_rateTxtbox.TextLength != 0)
-            {
-                try
-                {
+            if (basic_rateTxtbox.TextLength != 0) {
+                try {
                     double tempcheck;
                     tempcheck = Convert.ToDouble(basic_rateTxtbox.Text);
                     basic_rate = tempcheck;
                 }
-                catch (Exception asd)
-                {
+                catch (Exception asd) {
                     MessageBox.Show(asd.Message + " Make sure it is floating point number");
                     //basic_rateTxtbox.Clear();
                     basic_rate = 0;
@@ -128,19 +115,16 @@ namespace Activity5
 
         }
 
-        private void hono_numhrsTxtbox_TextChanged(object sender, EventArgs e)
-        {
+        private void hono_numhrsTxtbox_TextChanged(object sender, EventArgs e) {
             double hono_numhrs = 0, hono_rate = 0, hono_netincome = 0;
 
             // check hono_numhrs
-            try
-            {
+            try {
                 double tempcheck_hononumhrs_isdouble;
                 tempcheck_hononumhrs_isdouble = Convert.ToDouble(hono_numhrsTxtbox.Text);
                 hono_numhrs = tempcheck_hononumhrs_isdouble;
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message + " Make sure it is floating point number");
                 //hono_numhrsTxtbox.Clear();
                 hono_numhrs = 0; // default value if parsing fails
@@ -149,16 +133,13 @@ namespace Activity5
             }
 
             // check basic_rate
-            if (hono_rateTxtbox.TextLength != 0)
-            {
-                try
-                {
+            if (hono_rateTxtbox.TextLength != 0) {
+                try {
                     double tempcheck;
                     tempcheck = Convert.ToDouble(hono_rateTxtbox.Text);
                     hono_rate = tempcheck;
                 }
-                catch (Exception asd)
-                {
+                catch (Exception asd) {
                     MessageBox.Show(asd.Message + " Make sure it is floating point number");
                     //basic_rateTxtbox.Clear();
                     hono_rate = 0;
@@ -174,21 +155,17 @@ namespace Activity5
             hono_netincomeTxtbox.Text = hono_netincome.ToString("n");
         }
 
-        private void other_numhrsTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        private void other_numhrsTxtbox_TextChanged(object sender, EventArgs e) {
+            try {
                 double tempcheck;
                 tempcheck = Convert.ToDouble(other_numhrsTxtbox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message + " Make sure it is a floating point number");
                 other_numhrsTxtbox.Text = "0";
                 other_numhrsTxtbox.Focus();
             }
-            try
-            {
+            try {
                 double other_numhrs = 0, other_rate = 0, other_netincome = 0, grossincome = 0;
                 double basic_netincome = 0, hono_netincome = 0;
 
@@ -208,128 +185,97 @@ namespace Activity5
 
 
                 //SSS contribution based from the current table from SSS
-                /*if (grossincome < 1000)
-                {
+                /*if (grossincome < 1000) {
                     sss_contribTxtbox.Text = "0.00";
                 }
-                else if (grossincome > 1000 && grossincome <= 1249.99)
-                {
+                else if (grossincome > 1000 && grossincome <= 1249.99) {
                     sss_contribTxtbox.Text = "36.30";
                 }
-                else if (grossincome > 1250 && grossincome <= 1749.99)
-                {
+                else if (grossincome > 1250 && grossincome <= 1749.99) {
                     sss_contribTxtbox.Text = "54.50";
                 }
-                else if (grossincome > 1750 && grossincome <= 2249.99)
-                {
+                else if (grossincome > 1750 && grossincome <= 2249.99) {
                     sss_contribTxtbox.Text = "72.70";
                 }
-                else if (grossincome > 2250 && grossincome <= 2749.99)
-                {
+                else if (grossincome > 2250 && grossincome <= 2749.99) {
                     sss_contribTxtbox.Text = "90.80";
                 }
-                else if (grossincome > 2750 && grossincome <= 3249.99)
-                {
+                else if (grossincome > 2750 && grossincome <= 3249.99) {
                     sss_contribTxtbox.Text = "109.00";
                 }
-                else if (grossincome > 3250 && grossincome <= 3749.99)
-                {
+                else if (grossincome > 3250 && grossincome <= 3749.99) {
                     sss_contribTxtbox.Text = "127.20";
                 }
-                else if (grossincome > 3750 && grossincome <= 4249.99)
-                {
+                else if (grossincome > 3750 && grossincome <= 4249.99) {
                     sss_contribTxtbox.Text = "145.30";
                 }
-                else if (grossincome > 4250 && grossincome <= 4749.99)
-                {
+                else if (grossincome > 4250 && grossincome <= 4749.99) {
                     sss_contribTxtbox.Text = "163.50";
                 }
-                else if (grossincome > 4750 && grossincome <= 5249.99)
-                {
+                else if (grossincome > 4750 && grossincome <= 5249.99) {
                     sss_contribTxtbox.Text = "181.70";
                 }
-                else if (grossincome > 5250 && grossincome <= 5749.99)
-                {
+                else if (grossincome > 5250 && grossincome <= 5749.99) {
                     sss_contribTxtbox.Text = "199.80";
                 }
-                else if (grossincome > 5750 && grossincome <= 6249.99)
-                {
+                else if (grossincome > 5750 && grossincome <= 6249.99) {
                     sss_contribTxtbox.Text = "218.00";
                 }
-                else if (grossincome > 6250 && grossincome <= 6749.99)
-                {
+                else if (grossincome > 6250 && grossincome <= 6749.99) {
                     sss_contribTxtbox.Text = "236.29";
                 }
-                else if (grossincome > 6750 && grossincome <= 7249.99)
-                {
+                else if (grossincome > 6750 && grossincome <= 7249.99) {
                     sss_contribTxtbox.Text = "254.30";
                 }
-                else if (grossincome > 7250 && grossincome <= 7749.99)
-                {
+                else if (grossincome > 7250 && grossincome <= 7749.99) {
                     sss_contribTxtbox.Text = "272.50";
                 }
-                else if (grossincome > 7750 && grossincome <= 8249.99)
-                {
+                else if (grossincome > 7750 && grossincome <= 8249.99) {
                     sss_contribTxtbox.Text = "290.70";
                 }
-                else if (grossincome > 8250 && grossincome <= 8749.99)
-                {
+                else if (grossincome > 8250 && grossincome <= 8749.99) {
                     sss_contribTxtbox.Text = "308.80";
                 }
-                else if (grossincome > 8750 && grossincome <= 9249.99)
-                {
+                else if (grossincome > 8750 && grossincome <= 9249.99) {
                     sss_contribTxtbox.Text = "327.00";
                 }
-                else if (grossincome > 9250 && grossincome <= 9749.99)
-                {
+                else if (grossincome > 9250 && grossincome <= 9749.99) {
                     sss_contribTxtbox.Text = "345.20";
                 }
-                else if (grossincome > 9750 && grossincome <= 10249.99)
-                {
+                else if (grossincome > 9750 && grossincome <= 10249.99) {
                     sss_contribTxtbox.Text = "363.30";
                 }
-                else if (grossincome > 10250 && grossincome <= 10749.99)
-                {
+                else if (grossincome > 10250 && grossincome <= 10749.99) {
                     sss_contribTxtbox.Text = "381.50";
                 }
-                else if (grossincome > 10750 && grossincome <= 11249.99)
-                {
+                else if (grossincome > 10750 && grossincome <= 11249.99) {
                     sss_contribTxtbox.Text = "399.70";
                 }
-                else if (grossincome > 11250 && grossincome <= 11749.99)
-                {
+                else if (grossincome > 11250 && grossincome <= 11749.99) {
                     sss_contribTxtbox.Text = "417.80";
                 }
-                else if (grossincome > 11750 && grossincome <= 12249.99)
-                {
+                else if (grossincome > 11750 && grossincome <= 12249.99) {
                     sss_contribTxtbox.Text = "436.00";
                 }
-                else if (grossincome > 12250 && grossincome <= 12749.99)
-                {
+                else if (grossincome > 12250 && grossincome <= 12749.99) {
                     sss_contribTxtbox.Text = "454.20";
                 }
-                else if (grossincome > 12750 && grossincome <= 13249.99)
-                {
+                else if (grossincome > 12750 && grossincome <= 13249.99) {
                     sss_contribTxtbox.Text = "472.30";
                 }
-                else if (grossincome > 13250 && grossincome <= 13749.99)
-                {
+                else if (grossincome > 13250 && grossincome <= 13749.99) {
                     sss_contribTxtbox.Text = "490.50";
                 }
-                else if (grossincome > 13750 && grossincome <= 14249.99)
-                {
+                else if (grossincome > 13750 && grossincome <= 14249.99) {
                     sss_contribTxtbox.Text = "508.70";
                 }
-                else if (grossincome > 14250 && grossincome <= 14749.99)
-                {
+                else if (grossincome > 14250 && grossincome <= 14749.99) {
                     sss_contribTxtbox.Text = "526.80";
                 }
-                else if (grossincome > 14750 && grossincome <= 15249.99)
-                {
+                else if (grossincome > 14750 && grossincome <= 15249.99) {
                     sss_contribTxtbox.Text = "545.00";
                 }
-                else if (grossincome > 15250 && grossincome <= 15749.99)
-                {
+                else if (grossincome > 15250 && grossincome <= 15749.99) {
                     sss_contribTxtbox.Text = "563.20";
                 }
                 else
@@ -339,158 +285,122 @@ namespace Activity5
                 double sss = 0.00; // Initialize SSS contribution
                 double sss_employshare = 54.50; // Start at 54.50 for income >= 1250
 
-                if (grossincome < 1000) // If below 1000, set SSS to 0
-                {
+                if (grossincome < 1000) {
                     sss = 0.00;
                 }
-                else if (grossincome >= 1000 && grossincome <= 1249.99) // First contribution bracket
-                {
+                else if (grossincome >= 1000 && grossincome <= 1249.99) {
                     sss = 36.30;
                 }
-                else if (grossincome >= 15750) // Maximum contribution
-                {
+                else if (grossincome >= 15750) {
                     sss = 581.30;
                 }
-                else
-                {
+                else {
 
-                    for (double i = 1250; i <= 15249.99; i += 500) // Step by 500
-                    {
-                        if (grossincome >= i && grossincome <= i + 500)
-                        {
+                    for (double i = 1250; i <= 15249.99; i += 500) // Step by 500 {
+                        if (grossincome >= i && grossincome <= i + 500) {
                             sss = sss_employshare;
                             break;
                         }
-                        sss_employshare += 18.20; // Increase per bracket
-                    }
+                    sss_employshare += 18.20; // Increase per bracket
                 }
+            
+            
 
                 // Display the calculated SSS contribution
                 sss_contribTxtbox.Text = sss.ToString("N2");
 
                 //philhealth contribution based from the current table
-                /*if (grossincome <= 10000)
-                {
+                /*if (grossincome <= 10000) {
                     philhealth_contribTxtbox.Text = "137.50";
                 }
-                else if (grossincome > 10000 && grossincome <= 11000)
-                {
+                else if (grossincome > 10000 && grossincome <= 11000) {
                     philhealth_contribTxtbox.Text = "151.25";
                 }
-                else if (grossincome > 11000 && grossincome <= 12000)
-                {
+                else if (grossincome > 11000 && grossincome <= 12000) {
                     philhealth_contribTxtbox.Text = "165.00";
                 }
-                else if (grossincome > 12000 && grossincome <= 13000)
-                {
+                else if (grossincome > 12000 && grossincome <= 13000) {
                     philhealth_contribTxtbox.Text = "178.75";
                 }
-                else if (grossincome > 13000 && grossincome <= 14000)
-                {
+                else if (grossincome > 13000 && grossincome <= 14000) {
                     philhealth_contribTxtbox.Text = "192.50";
                 }
-                else if (grossincome > 14000 && grossincome <= 15000)
-                {
+                else if (grossincome > 14000 && grossincome <= 15000) {
                     philhealth_contribTxtbox.Text = "206.25";
                 }
-                else if (grossincome > 15000 && grossincome <= 16000)
-                {
+                else if (grossincome > 15000 && grossincome <= 16000) {
                     philhealth_contribTxtbox.Text = "220.00";
                 }
-                else if (grossincome > 16000 && grossincome <= 17000)
-                {
+                else if (grossincome > 16000 && grossincome <= 17000) {
                     philhealth_contribTxtbox.Text = "233.75";
                 }
-                else if (grossincome > 17000 && grossincome <= 18000)
-                {
+                else if (grossincome > 17000 && grossincome <= 18000) {
                     philhealth_contribTxtbox.Text = "247.50";
                 }
-                else if (grossincome > 18000 && grossincome <= 19000)
-                {
+                else if (grossincome > 18000 && grossincome <= 19000) {
                     philhealth_contribTxtbox.Text = "261.25";
                 }
-                else if (grossincome > 19000 && grossincome <= 20000)
-                {
+                else if (grossincome > 19000 && grossincome <= 20000) {
                     philhealth_contribTxtbox.Text = "275.00";
                 }
-                else if (grossincome > 20000 && grossincome <= 21000)
-                {
+                else if (grossincome > 20000 && grossincome <= 21000) {
                     philhealth_contribTxtbox.Text = "288.75";
                 }
-                else if (grossincome > 21000 && grossincome <= 22000)
-                {
+                else if (grossincome > 21000 && grossincome <= 22000) {
                     philhealth_contribTxtbox.Text = "302.50";
                 }
-                else if (grossincome > 22000 && grossincome <= 23000)
-                {
+                else if (grossincome > 22000 && grossincome <= 23000) {
                     philhealth_contribTxtbox.Text = "316.25";
                 }
-                else if (grossincome > 23000 && grossincome <= 24000)
-                {
+                else if (grossincome > 23000 && grossincome <= 24000) {
                     philhealth_contribTxtbox.Text = "330.00";
                 }
-                else if (grossincome > 24000 && grossincome <= 25000)
-                {
+                else if (grossincome > 24000 && grossincome <= 25000) {
                     philhealth_contribTxtbox.Text = "343.75";
                 }
-                else if (grossincome > 25000 && grossincome <= 26000)
-                {
+                else if (grossincome > 25000 && grossincome <= 26000) {
                     philhealth_contribTxtbox.Text = "357.50";
                 }
-                else if (grossincome > 26000 && grossincome <= 27000)
-                {
+                else if (grossincome > 26000 && grossincome <= 27000) {
                     philhealth_contribTxtbox.Text = "371.25";
                 }
-                else if (grossincome > 27000 && grossincome <= 28000)
-                {
+                else if (grossincome > 27000 && grossincome <= 28000) {
                     philhealth_contribTxtbox.Text = "385.00";
                 }
-                else if (grossincome > 28000 && grossincome <= 29000)
-                {
+                else if (grossincome > 28000 && grossincome <= 29000) {
                     philhealth_contribTxtbox.Text = "398.75";
                 }
-                else if (grossincome > 29000 && grossincome <= 30000)
-                {
+                else if (grossincome > 29000 && grossincome <= 30000) {
                     philhealth_contribTxtbox.Text = "412.50";
                 }
-                else if (grossincome > 30000 && grossincome <= 31000)
-                {
+                else if (grossincome > 30000 && grossincome <= 31000) {
                     philhealth_contribTxtbox.Text = "426.25";
                 }
-                else if (grossincome > 31000 && grossincome <= 32000)
-                {
+                else if (grossincome > 31000 && grossincome <= 32000) {
                     philhealth_contribTxtbox.Text = "440.00";
                 }
-                else if (grossincome > 32000 && grossincome <= 33000)
-                {
+                else if (grossincome > 32000 && grossincome <= 33000) {
                     philhealth_contribTxtbox.Text = "453.75";
                 }
-                else if (grossincome > 33000 && grossincome <= 34000)
-                {
+                else if (grossincome > 33000 && grossincome <= 34000) {
                     philhealth_contribTxtbox.Text = "467.50";
                 }
-                else if (grossincome > 34000 && grossincome <= 35000)
-                {
+                else if (grossincome > 34000 && grossincome <= 35000) {
                     philhealth_contribTxtbox.Text = "481.25";
                 }
-                else if (grossincome > 35000 && grossincome <= 36000)
-                {
+                else if (grossincome > 35000 && grossincome <= 36000) {
                     philhealth_contribTxtbox.Text = "495.00";
                 }
-                else if (grossincome > 36000 && grossincome <= 37000)
-                {
+                else if (grossincome > 36000 && grossincome <= 37000) {
                     philhealth_contribTxtbox.Text = "508.75";
                 }
-                else if (grossincome > 37000 && grossincome <= 38000)
-                {
+                else if (grossincome > 37000 && grossincome <= 38000) {
                     philhealth_contribTxtbox.Text = "522.50";
                 }
-                else if (grossincome > 38000 && grossincome <= 39000)
-                {
+                else if (grossincome > 38000 && grossincome <= 39000) {
                     philhealth_contribTxtbox.Text = "536.25";
                 }
-                else if (grossincome > 39000 && grossincome <= 39999.99)
-                {
+                else if (grossincome > 39000 && grossincome <= 39999.99) {
                     philhealth_contribTxtbox.Text = "543.13";
                 }
                 else
@@ -499,19 +409,15 @@ namespace Activity5
                 //Philhealth contribution based from the current table (using Loop)
                 double philhealth = 137.50;
 
-                if (grossincome <= 10000)
-                {
+                if (grossincome <= 10000) {
                     philhealth_contribTxtbox.Text = "137.50";
                 }
-                else
-                {
+                else {
                     double philhealth_employshare = 137.50;
 
-                    for (double i = 10000; i <= 40000; i += 1000)
-                    {
+                    for (double i = 10000; i <= 40000; i += 1000) {
                         philhealth_employshare += 13.75;
-                        if (grossincome > i && grossincome <= i + 1000)
-                        {
+                        if (grossincome > i && grossincome <= i + 1000) {
 
                             philhealth = philhealth_employshare;
                             break; // Stop after finding the correct range
@@ -527,27 +433,22 @@ namespace Activity5
 
                     //tax contribution per month based from new table effective Jan 1, 2023
                     double tax = 0;
-                    if (grossincome <= 10416.67) // Below PHP 10,417 (Bracket 1)
-                    {
+                    if (grossincome <= 10416.67) {
                         tax = 0;
                     }
-                    else if (grossincome > 10416.67 && grossincome <= 16666.67) // PHP 10,417 - PHP 16,666 (Bracket 2)
-                    {
+                    else if (grossincome > 10416.67 && grossincome <= 16666.67){
                         tax = (grossincome - 10417) * 0.15;
                     }
-                    else if (grossincome > 16666.67 && grossincome <= 33333.33) // PHP 16,667 - PHP 33,333 (Bracket 3)
-                    {
+                    else if (grossincome > 16666.67 && grossincome <= 33333.33){
                         tax = 1875 + ((grossincome - 16667) * 0.20);
                     }
-                    else if (grossincome > 33333.33 && grossincome <= 83333.33) // PHP 33,334 - PHP 83,333 (Bracket 4)
-                    {
+                    else if (grossincome > 33333.33 && grossincome <= 83333.33) {
                         tax = 8541.80 + ((grossincome - 33333) * 0.25);
                     }
-                    else if (grossincome > 83333.33 && grossincome <= 333333.33) // PHP 83,334 - PHP 333,333 (Bracket 5)
-                    {
+                    else if (grossincome > 83333.33 && grossincome <= 333333.33) {
                         tax = 35416.80 + ((grossincome - 83333) * 0.30);
                     }
-                    else // PHP 333,333 and above (Bracket 6)
+                    else 
                     {
                         tax = 183541.80 + ((grossincome - 333333) * 0.35);
                     }
@@ -557,51 +458,41 @@ namespace Activity5
 
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 MessageBox.Show("Invalid Data Entry");
                 other_numhrsTxtbox.Clear();
                 other_numhrsTxtbox.Focus();
             }
             //PAGIBIG contribution 
-            try
-            {
+            try {
                 double pagibigContribution = 200; // Fixed Pag-IBIG contribution
 
                 pagibig_contribTxtbox.Text = pagibigContribution.ToString("n"); // Display contribution
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
 
-        private void others_loanCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (others_loanCombo.Text == "Other 1")
-            {
+        private void others_loanCombo_SelectedIndexChanged(object sender, EventArgs e) {
+            if (others_loanCombo.Text == "Other 1") {
                 others_loanTxtbox.Text = "500.00";
             }
-            else if (others_loanCombo.Text == "Other 2")
-            {
+            else if (others_loanCombo.Text == "Other 2") {
                 others_loanTxtbox.Text = "550.00";
             }
-            else if (others_loanCombo.Text == "Other 3")
-            {
+            else if (others_loanCombo.Text == "Other 3") {
                 others_loanTxtbox.Text = "1550.00";
             }
-            else if (others_loanCombo.Text == "Other 4")
-            {
+            else if (others_loanCombo.Text == "Other 4") {
                 others_loanTxtbox.Text = "1250.00";
             }
-            else
-            {
+            else {
                 MessageBox.Show("No other loan option selected!");
             }
         }
 
-        private void new_btn_Click(object sender, EventArgs e)
-        {
+        private void new_btn_Click(object sender, EventArgs e) {
             //codes for clearing the textboxes
             emp_nuTxtbox.Clear();
             firstnameTxtbox.Clear();
@@ -631,8 +522,7 @@ namespace Activity5
             pagibig_loanTxtbox.Clear();
         }
 
-        private void printPayslip_btn_Click(object sender, EventArgs e)
-        {
+        private void printPayslip_btn_Click(object sender, EventArgs e) {
             //codes for calling the other form connected to the current form
             MActivity5_PrintFrms print1 = new MActivity5_PrintFrms();
 
@@ -645,8 +535,7 @@ namespace Activity5
 
         }
 
-        private void previewPayslip_btn_Click(object sender, EventArgs e)
-        {
+        private void previewPayslip_btn_Click(object sender, EventArgs e) {
             //payslip_viewListBox.Items.Add("");
             payslip_viewListBox.Items.Add("Employee Number: " + " " + emp_nuTxtbox.Text);
             payslip_viewListBox.Items.Add("Firstname: " + " " + firstnameTxtbox.Text);
@@ -656,6 +545,7 @@ namespace Activity5
             payslip_viewListBox.Items.Add("Employee Status: " + " " + empStatusTxtbox.Text);
             payslip_viewListBox.Items.Add("Department: " + " " + DeptNameTxtbox.Text);
             payslip_viewListBox.Items.Add("Pay Date: " + " " + paydateDatePicker.Text);
+
             payslip_viewListBox.Items.Add("---------------------------------------------------------------------------------------");
             payslip_viewListBox.Items.Add("BP Num. of Hrs.: " + "P" + basic_numhrsTxtbox.Text);
             payslip_viewListBox.Items.Add("BP Rate / Hr.: " + "P" + basic_rateTxtbox.Text);
@@ -678,28 +568,19 @@ namespace Activity5
             payslip_viewListBox.Items.Add("Tax Contribution: " + "P" + tax_contribTxtbox.Text);
 
             payslip_viewListBox.Items.Add("SSS Loan: " + "P" + sss_loanTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Pagibig Loan: " + "P" + pagibig_loanTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Faculty Savings Deposit: " + "P" + FSD_depositTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Faculty Savings Loan: " + "P" + FS_loanTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Salary Loan: " + "P" + sal_loanTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Other Loan: " + "P" + others_loanTxtbox.Text);
 
             payslip_viewListBox.Items.Add("---------------------------------------------------------------------------------------");
-
             payslip_viewListBox.Items.Add("Total Deduction: " + "P" + total_deducTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Gross Income: " + "P" + gross_incomeTxtbox.Text);
-
             payslip_viewListBox.Items.Add("Net Income: " + "P" + net_incomeTxtbox.Text);
         }
 
-        private void calc_btn_Click(object sender, EventArgs e)
-        {
+        private void calc_btn_Click(object sender, EventArgs e) {
             //codes for converting input data from textboxes as string to numeric
             //codes for putting data from textboxes to variables
             sss_contrib = Convert.ToDouble(sss_contribTxtbox.Text);
@@ -745,13 +626,11 @@ namespace Activity5
 
 
 
-        public MActivity5_form()
-        {
+        public MActivity5_form() {
             InitializeComponent();
         }
 
-        private void Activity5_Load(object sender, EventArgs e)
-        {
+        private void Activity5_Load(object sender, EventArgs e) {
             basic_netincomeTxtbox.Enabled = false;
             hono_netincomeTxtbox.Enabled = false;
             other_netincomeTxtbox.Enabled = false;
@@ -785,171 +664,129 @@ namespace Activity5
             picpathTxtbox.Hide();
         }
 
-        private void emp_nuTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        private void emp_nuTxtbox_TextChanged(object sender, EventArgs e) {
+            try {
                 int temp_to_check_if_quantity_is_int;
                 temp_to_check_if_quantity_is_int = Convert.ToInt32(emp_nuTxtbox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message);
                 emp_nuTxtbox.Clear();
                 emp_nuTxtbox.Focus();
             }
         }
 
-        private void numDependentTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        private void numDependentTxtbox_TextChanged(object sender, EventArgs e) {
+            try {
                 int temp_to_check_if_quantity_is_int;
                 temp_to_check_if_quantity_is_int = Convert.ToInt32(numDependentTxtbox.Text);
             }
-            catch (Exception asd)
-            {
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message);
                 numDependentTxtbox.Clear();
                 numDependentTxtbox.Focus();
             }
         }
 
-        private void basic_rateTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            if (basic_rateTxtbox.TextLength != 0)
-            {
-                // update the rate
-                try
-                {
-                    double temp_to_check_if_quantity_is_double;
-                    temp_to_check_if_quantity_is_double = Convert.ToDouble(basic_rateTxtbox.Text);
-                }
-                catch (Exception asd)
-                {
-                    MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                    //basic_rateTxtbox.Clear();
-                    basic_rateTxtbox.Text = "0";
-                    basic_rateTxtbox.Focus();
-                }
+        private void basic_rateTxtbox_TextChanged(object sender, EventArgs e) { 
+          if (basic_rateTxtbox.TextLength != 0) {
+            // update the rate 
+            try {
+              double temp_to_check_if_quantity_is_double;
+              temp_to_check_if_quantity_is_double = Convert.ToDouble(basic_rateTxtbox.Text);
+            } 
+            catch (Exception asd) {
+              MessageBox.Show(asd.Message + " Make sure it is floating point number");
+              //basic_rateTxtbox.Clear();
+              basic_rateTxtbox.Text = "0";
+              basic_rateTxtbox.Focus();
             }
+          }
+        }
 
-
+        private void hono_rateTxtbox_TextChanged(object sender, EventArgs e) { 
+          if (hono_rateTxtbox.TextLength != 0) {
+            // update rate 
+            try {
+              double tempcheck_honorate_isdouble;
+              tempcheck_honorate_isdouble = Convert.ToDouble(hono_rateTxtbox.Text);
+            } 
+            catch (Exception asd) {
+              MessageBox.Show(asd.Message + "make sure it is floating point number");
+              //hono_rateTxtbox.Clear();
+              hono_rateTxtbox.Text = "0";
+              hono_rateTxtbox.Focus();
+            }
+          }
+        }
+        private void other_rateTxtbox_TextChanged(object sender, EventArgs e) { 
+          try {
+            double tempcheck_otherrate_isdouble;
+            tempcheck_otherrate_isdouble = Convert.ToDouble(other_rateTxtbox.Text);
+          } 
+          catch (Exception asd) {
+            MessageBox.Show(asd.Message + " Make sure it is floating point number");
+            //other_rateTxtbox.Clear();
+            other_rateTxtbox.Text = "0";
+            other_rateTxtbox.Focus();
+          }
+        }
+        private void sss_loanTxtbox_TextChanged(object sender, EventArgs e) { 
+          try {
+            double tempcheck;
+            tempcheck = Convert.ToDouble(sss_loanTxtbox.Text);
+          } 
+          catch (Exception asd) {
+            MessageBox.Show(asd.Message + " Make sure it is floating point number");
+            //sss_loanTxtbox.Clear();
+            sss_loanTxtbox.Text = "0";
+            sss_loanTxtbox.Focus();
+          }
+        }
+        private void pagibig_loanTxtbox_TextChanged(object sender, EventArgs e) { 
+          try {
+            double tempcheck;
+            tempcheck = Convert.ToDouble(pagibig_loanTxtbox.Text);
+          } 
+          catch (Exception asd) {
+            MessageBox.Show(asd.Message + " Make sure it is floating point number");
+            //pagibig_loanTxtbox.Clear();
+            pagibig_loanTxtbox.Text = "0";
+            pagibig_loanTxtbox.Focus();
+          }
+        }
+        private void FSD_depositTxtbox_TextChanged(object sender, EventArgs e) { 
+          try {
+            double tempcheck;
+            tempcheck = Convert.ToDouble(FSD_depositTxtbox.Text);
+          } 
+          catch (Exception asd) {
+            MessageBox.Show(asd.Message + " Make sure it is floating point number");
+            //FSD_depositTxtbox.Clear();
+            FSD_depositTxtbox.Text = "0";
+            FSD_depositTxtbox.Focus();
+          }
+        }
+        private void FS_loanTxtbox_TextChanged(object sender, EventArgs e) { 
+          try {
+            double tempcheck;
+            tempcheck = Convert.ToDouble(FS_loanTxtbox.Text);
+          } 
+          catch (Exception asd) {
+            MessageBox.Show(asd.Message + " Make sure it is floating point number");
+            //FS_loanTxtbox.Clear();
+            FS_loanTxtbox.Text = "0";
+            FS_loanTxtbox.Focus();
+          }
 
         }
 
-        private void hono_rateTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            if (hono_rateTxtbox.TextLength != 0)
-            {
-                // update rate
-                try
-                {
-                    double tempcheck_honorate_isdouble;
-                    tempcheck_honorate_isdouble = Convert.ToDouble(hono_rateTxtbox.Text);
-                }
-                catch (Exception asd)
-                {
-                    MessageBox.Show(asd.Message + "make sure it is floating point number");
-                    //hono_rateTxtbox.Clear();
-                    hono_rateTxtbox.Text = "0";
-                    hono_rateTxtbox.Focus();
-                }
-
-            }
-
-        }
-
-        private void other_rateTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double tempcheck_otherrate_isdouble;
-                tempcheck_otherrate_isdouble = Convert.ToDouble(other_rateTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
-                MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                //other_rateTxtbox.Clear();
-                other_rateTxtbox.Text = "0";
-                other_rateTxtbox.Focus();
-            }
-        }
-
-        private void sss_loanTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double tempcheck;
-                tempcheck = Convert.ToDouble(sss_loanTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
-                MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                //sss_loanTxtbox.Clear();
-                sss_loanTxtbox.Text = "0";
-                sss_loanTxtbox.Focus();
-            }
-        }
-
-        private void pagibig_loanTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double tempcheck;
-                tempcheck = Convert.ToDouble(pagibig_loanTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
-                MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                //pagibig_loanTxtbox.Clear();
-                pagibig_loanTxtbox.Text = "0";
-                pagibig_loanTxtbox.Focus();
-            }
-        }
-
-        private void FSD_depositTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double tempcheck;
-                tempcheck = Convert.ToDouble(FSD_depositTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
-                MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                //FSD_depositTxtbox.Clear();
-                FSD_depositTxtbox.Text = "0";
-                FSD_depositTxtbox.Focus();
-            }
-        }
-
-        private void FS_loanTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double tempcheck;
-                tempcheck = Convert.ToDouble(FS_loanTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
-                MessageBox.Show(asd.Message + " Make sure it is floating point number");
-                //FS_loanTxtbox.Clear();
-                FS_loanTxtbox.Text = "0";
-                FS_loanTxtbox.Focus();
-            }
-
-        }
-
-        private void sal_loanTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        private void sal_loanTxtbox_TextChanged(object sender, EventArgs e) {
+            try {
                 double tempcheck;
                 tempcheck = Convert.ToDouble(sal_loanTxtbox.Text);
-            }
-            catch (Exception asd)
-            {
+            } 
+            catch (Exception asd) {
                 MessageBox.Show(asd.Message + " Make sure it is floating point number");
                 //sal_loanTxtbox.Clear();
                 sal_loanTxtbox.Text = "0";
