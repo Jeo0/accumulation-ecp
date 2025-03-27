@@ -563,8 +563,7 @@ namespace lesson3___example3
         private void setPriceAndAddListbox(double price, object namename){
 
           discountAmountTxtBox.Text = "0.00";
-          priceTxtBox.Text = "P " + Convert.ToString(price);
-          //priceTxtBox.Text = price.ToString("n"); // format to PHP
+          priceTxtBox.Text = Convert.ToString(price);
 
           // option 1: check before typecasting
           if(namename is System.Windows.Forms.CheckBox checkBox){
