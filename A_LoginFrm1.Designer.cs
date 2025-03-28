@@ -1,6 +1,6 @@
 ﻿namespace projectNamin
 {
-    partial class LoginFrm1
+    partial class A_LoginFrm1
     {
         /// <summary>
         /// Required designer variable.

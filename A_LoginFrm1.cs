@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace projectNamin
 {
-    public partial class LoginFrm1 : Form
+    public partial class A_LoginFrm1 : Form
     {
-        public LoginFrm1()
+        public A_LoginFrm1()
         {
             InitializeComponent();
         }

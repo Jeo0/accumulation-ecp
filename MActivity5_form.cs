@@ -13,22 +13,10 @@ namespace Activity5 {
     public partial class MActivity5_form : Form {
         //declaration of global variables
 
-      Class1 testclass = new Class1();
-        // put this in test.cs
-        // private string picpath;
-        // private Double basic_netincome = 0.00,
-            // basic_numhrs = 0.00,
-            // basic_rate = 0.00,
-            // hono_netincome = 0.00,
-            // hono_numhrs = 0.00,
-            // hono_rate = 0.00,
-            // other_netincome = 0.00,
-            // other_numhrs = 0.00,
-            // other_rate = 0.00;
+      MActivity5_class testclass = new MActivity5_class();
 
-
-        private void cancel_btn_Click(object sender, EventArgs e) {
-            //codes for clearing the textboxes
+        private void cleartxtbox()
+        {
             emp_nuTxtbox.Clear();
             firstnameTxtbox.Clear();
             MNameTxtbox.Clear();
@@ -55,6 +43,11 @@ namespace Activity5 {
             tax_contribTxtbox.Clear();
             sss_loanTxtbox.Clear();
             pagibig_loanTxtbox.Clear();
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e) {
+            //function for clearing the textboxes
+            cleartxtbox();
         }
 
         private void browse_btn_Click(object sender, EventArgs e) {
@@ -222,8 +215,288 @@ namespace Activity5 {
             //Philhealth contribution based from the current table (using Loop)
             double philhealth = 137.50;
 
+
+                // Compute gross income
+                grossincome = testclass.basic_netincome + testclass.hono_netincome + testclass.other_netincome;
+                gross_incomeTxtbox.Text = grossincome.ToString("n");
+
+
+                //SSS contribution based from the current table from SSS
+                /*if (grossincome < 1000) {
+                    sss_contribTxtbox.Text = "0.00";
+                }
+                else if (grossincome > 1000 && grossincome <= 1249.99) {
+                    sss_contribTxtbox.Text = "36.30";
+                }
+                else if (grossincome > 1250 && grossincome <= 1749.99) {
+                    sss_contribTxtbox.Text = "54.50";
+                }
+                else if (grossincome > 1750 && grossincome <= 2249.99) {
+                    sss_contribTxtbox.Text = "72.70";
+                }
+                else if (grossincome > 2250 && grossincome <= 2749.99) {
+                    sss_contribTxtbox.Text = "90.80";
+                }
+                else if (grossincome > 2750 && grossincome <= 3249.99) {
+                    sss_contribTxtbox.Text = "109.00";
+                }
+                else if (grossincome > 3250 && grossincome <= 3749.99) {
+                    sss_contribTxtbox.Text = "127.20";
+                }
+                else if (grossincome > 3750 && grossincome <= 4249.99) {
+                    sss_contribTxtbox.Text = "145.30";
+                }
+                else if (grossincome > 4250 && grossincome <= 4749.99) {
+                    sss_contribTxtbox.Text = "163.50";
+                }
+                else if (grossincome > 4750 && grossincome <= 5249.99) {
+                    sss_contribTxtbox.Text = "181.70";
+                }
+                else if (grossincome > 5250 && grossincome <= 5749.99) {
+                    sss_contribTxtbox.Text = "199.80";
+                }
+                else if (grossincome > 5750 && grossincome <= 6249.99) {
+                    sss_contribTxtbox.Text = "218.00";
+                }
+                else if (grossincome > 6250 && grossincome <= 6749.99) {
+                    sss_contribTxtbox.Text = "236.29";
+                }
+                else if (grossincome > 6750 && grossincome <= 7249.99) {
+                    sss_contribTxtbox.Text = "254.30";
+                }
+                else if (grossincome > 7250 && grossincome <= 7749.99) {
+                    sss_contribTxtbox.Text = "272.50";
+                }
+                else if (grossincome > 7750 && grossincome <= 8249.99) {
+                    sss_contribTxtbox.Text = "290.70";
+                }
+                else if (grossincome > 8250 && grossincome <= 8749.99) {
+                    sss_contribTxtbox.Text = "308.80";
+                }
+                else if (grossincome > 8750 && grossincome <= 9249.99) {
+                    sss_contribTxtbox.Text = "327.00";
+                }
+                else if (grossincome > 9250 && grossincome <= 9749.99) {
+                    sss_contribTxtbox.Text = "345.20";
+                }
+                else if (grossincome > 9750 && grossincome <= 10249.99) {
+                    sss_contribTxtbox.Text = "363.30";
+                }
+                else if (grossincome > 10250 && grossincome <= 10749.99) {
+                    sss_contribTxtbox.Text = "381.50";
+                }
+                else if (grossincome > 10750 && grossincome <= 11249.99) {
+                    sss_contribTxtbox.Text = "399.70";
+                }
+                else if (grossincome > 11250 && grossincome <= 11749.99) {
+                    sss_contribTxtbox.Text = "417.80";
+                }
+                else if (grossincome > 11750 && grossincome <= 12249.99) {
+                    sss_contribTxtbox.Text = "436.00";
+                }
+                else if (grossincome > 12250 && grossincome <= 12749.99) {
+                    sss_contribTxtbox.Text = "454.20";
+                }
+                else if (grossincome > 12750 && grossincome <= 13249.99) {
+                    sss_contribTxtbox.Text = "472.30";
+                }
+                else if (grossincome > 13250 && grossincome <= 13749.99) {
+                    sss_contribTxtbox.Text = "490.50";
+                }
+                else if (grossincome > 13750 && grossincome <= 14249.99) {
+                    sss_contribTxtbox.Text = "508.70";
+                }
+                else if (grossincome > 14250 && grossincome <= 14749.99) {
+                    sss_contribTxtbox.Text = "526.80";
+                }
+                else if (grossincome > 14750 && grossincome <= 15249.99) {
+                    sss_contribTxtbox.Text = "545.00";
+                }
+                else if (grossincome > 15250 && grossincome <= 15749.99) {
+                    sss_contribTxtbox.Text = "563.20";
+                }
+                else
+                    sss_contribTxtbox.Text = "581.30";*/
+
+                //SSS contribution based from the current table from SSS (using Loop)
+                sss = 0.00; // Initialize SSS contribution
+                sss_employshare = 54.50; // Start at 54.50 for income >= 1250
+
+                if (grossincome < 1000) {
+                    sss = 0.00;
+                }
+                else if (grossincome >= 1000 && grossincome <= 1249.99) {
+                    sss = 36.30;
+                }
+                else if (grossincome >= 15750) {
+                    sss = 581.30;
+                }
+                else {
+
+                    for (double i = 1250; i <= 15249.99; i += 500) // Step by 500 {
+                        if (grossincome >= i && grossincome <= i + 500) {
+                            sss = sss_employshare;
+                            break;
+                        }
+                    sss_employshare += 18.20; // Increase per bracket
+                }
+            
+            
+
+                // Display the calculated SSS contribution
+                sss_contribTxtbox.Text = sss.ToString("N2");
+
+                //philhealth contribution based from the current table
+                /*if (grossincome <= 10000) {
+                    philhealth_contribTxtbox.Text = "137.50";
+                }
+                else if (grossincome > 10000 && grossincome <= 11000) {
+                    philhealth_contribTxtbox.Text = "151.25";
+                }
+                else if (grossincome > 11000 && grossincome <= 12000) {
+                    philhealth_contribTxtbox.Text = "165.00";
+                }
+                else if (grossincome > 12000 && grossincome <= 13000) {
+                    philhealth_contribTxtbox.Text = "178.75";
+                }
+                else if (grossincome > 13000 && grossincome <= 14000) {
+                    philhealth_contribTxtbox.Text = "192.50";
+                }
+                else if (grossincome > 14000 && grossincome <= 15000) {
+                    philhealth_contribTxtbox.Text = "206.25";
+                }
+                else if (grossincome > 15000 && grossincome <= 16000) {
+                    philhealth_contribTxtbox.Text = "220.00";
+                }
+                else if (grossincome > 16000 && grossincome <= 17000) {
+                    philhealth_contribTxtbox.Text = "233.75";
+                }
+                else if (grossincome > 17000 && grossincome <= 18000) {
+                    philhealth_contribTxtbox.Text = "247.50";
+                }
+                else if (grossincome > 18000 && grossincome <= 19000) {
+                    philhealth_contribTxtbox.Text = "261.25";
+                }
+                else if (grossincome > 19000 && grossincome <= 20000) {
+                    philhealth_contribTxtbox.Text = "275.00";
+                }
+                else if (grossincome > 20000 && grossincome <= 21000) {
+                    philhealth_contribTxtbox.Text = "288.75";
+                }
+                else if (grossincome > 21000 && grossincome <= 22000) {
+                    philhealth_contribTxtbox.Text = "302.50";
+                }
+                else if (grossincome > 22000 && grossincome <= 23000) {
+                    philhealth_contribTxtbox.Text = "316.25";
+                }
+                else if (grossincome > 23000 && grossincome <= 24000) {
+                    philhealth_contribTxtbox.Text = "330.00";
+                }
+                else if (grossincome > 24000 && grossincome <= 25000) {
+                    philhealth_contribTxtbox.Text = "343.75";
+                }
+                else if (grossincome > 25000 && grossincome <= 26000) {
+                    philhealth_contribTxtbox.Text = "357.50";
+                }
+                else if (grossincome > 26000 && grossincome <= 27000) {
+                    philhealth_contribTxtbox.Text = "371.25";
+                }
+                else if (grossincome > 27000 && grossincome <= 28000) {
+                    philhealth_contribTxtbox.Text = "385.00";
+                }
+                else if (grossincome > 28000 && grossincome <= 29000) {
+                    philhealth_contribTxtbox.Text = "398.75";
+                }
+                else if (grossincome > 29000 && grossincome <= 30000) {
+                    philhealth_contribTxtbox.Text = "412.50";
+                }
+                else if (grossincome > 30000 && grossincome <= 31000) {
+                    philhealth_contribTxtbox.Text = "426.25";
+                }
+                else if (grossincome > 31000 && grossincome <= 32000) {
+                    philhealth_contribTxtbox.Text = "440.00";
+                }
+                else if (grossincome > 32000 && grossincome <= 33000) {
+                    philhealth_contribTxtbox.Text = "453.75";
+                }
+                else if (grossincome > 33000 && grossincome <= 34000) {
+                    philhealth_contribTxtbox.Text = "467.50";
+                }
+                else if (grossincome > 34000 && grossincome <= 35000) {
+                    philhealth_contribTxtbox.Text = "481.25";
+                }
+                else if (grossincome > 35000 && grossincome <= 36000) {
+                    philhealth_contribTxtbox.Text = "495.00";
+                }
+                else if (grossincome > 36000 && grossincome <= 37000) {
+                    philhealth_contribTxtbox.Text = "508.75";
+                }
+                else if (grossincome > 37000 && grossincome <= 38000) {
+                    philhealth_contribTxtbox.Text = "522.50";
+                }
+                else if (grossincome > 38000 && grossincome <= 39000) {
+                    philhealth_contribTxtbox.Text = "536.25";
+                }
+                else if (grossincome > 39000 && grossincome <= 39999.99) {
+                    philhealth_contribTxtbox.Text = "543.13";
+                }
+                else
+                    philhealth_contribTxtbox.Text = "550.00";*/
+
+                //Philhealth contribution based from the current table (using Loop)
+                
+                philhealth = 137.50;
+                if (grossincome <= 10000) {
+                    philhealth_contribTxtbox.Text = "137.50";
+                }
+                else {
+                    double philhealth_employshare = 137.50;
+
+                    for (double i = 10000; i <= 40000; i += 1000) {
+                        philhealth_employshare += 13.75;
+                        if (grossincome > i && grossincome <= i + 1000) {
+
+                            philhealth = philhealth_employshare;
+                            break; // Stop after finding the correct range
+                        }
+
+                    }
+
+                    philhealth_contribTxtbox.Text = philhealth.ToString("n");
+
+
+
+
+
+                    //tax contribution per month based from new table effective Jan 1, 2023
+                    double tax = 0;
+                    if (grossincome <= 10416.67) {
+                        tax = 0;
+                    }
+                    else if (grossincome > 10416.67 && grossincome <= 16666.67){
+                        tax = (grossincome - 10417) * 0.15;
+                    }
+                    else if (grossincome > 16666.67 && grossincome <= 33333.33){
+                        tax = 1875 + ((grossincome - 16667) * 0.20);
+                    }
+                    else if (grossincome > 33333.33 && grossincome <= 83333.33) {
+                        tax = 8541.80 + ((grossincome - 33333) * 0.25);
+                    }
+                    else if (grossincome > 83333.33 && grossincome <= 333333.33) {
+                        tax = 35416.80 + ((grossincome - 83333) * 0.30);
+                    }
+                    else 
+                    {
+                        tax = 183541.80 + ((grossincome - 333333) * 0.35);
+                    }
+
+                    tax_contribTxtbox.Text = tax.ToString("n");
+
+
+                }
             if (grossincome <= 10000) {
               philhealth_contribTxtbox.Text = "137.50";
+
             }
             else {
               double philhealth_employshare = 137.50;
@@ -244,26 +517,27 @@ namespace Activity5 {
 
 
 
-                    //tax contribution per month based from new table effective Jan 1, 2023
-                    double tax = 0;
-                    if (grossincome <= 10416.67) // Below PHP 10,417 (Bracket 1) {
-                        tax = 0;
-                    }
-                    else if (grossincome > 10416.67 && grossincome <= 16666.67) // PHP 10,417 - PHP 16,666 (Bracket 2) {
-                        tax = (grossincome - 10417) * 0.15;
-                    }
-                    else if (grossincome > 16666.67 && grossincome <= 33333.33) // PHP 16,667 - PHP 33,333 (Bracket 3) {
-                        tax = 1875 + ((grossincome - 16667) * 0.20);
-                    }
-                    else if (grossincome > 33333.33 && grossincome <= 83333.33) // PHP 33,334 - PHP 83,333 (Bracket 4) {
-                        tax = 8541.80 + ((grossincome - 33333) * 0.25);
-                    }
-                    else if (grossincome > 83333.33 && grossincome <= 333333.33) // PHP 83,334 - PHP 333,333 (Bracket 5) {
-                        tax = 35416.80 + ((grossincome - 83333) * 0.30);
-                    }
-                    else // PHP 333,333 and above (Bracket 6) {
-                        tax = 183541.80 + ((grossincome - 333333) * 0.35);
-                    }
+            //tax contribution per month based from new table effective Jan 1, 2023
+            double tax = 0;
+            if (grossincome <= 10416.67) {// Below PHP 10,417 (Bracket 1) 
+              tax = 0;
+
+            } else if (grossincome > 10416.67 && grossincome <= 16666.67) { // PHP 10,417 - PHP 16,666 (Bracket 2) 
+              tax = (grossincome - 10417) * 0.15;
+
+            }
+            else if (grossincome > 16666.67 && grossincome <= 33333.33) { // PHP 16,667 - PHP 33,333 (Bracket 3) 
+              tax = 1875 + ((grossincome - 16667) * 0.20);
+
+            } else if (grossincome > 33333.33 && grossincome <= 83333.33) { // PHP 33,334 - PHP 83,333 (Bracket 4) 
+              tax = 8541.80 + ((grossincome - 33333) * 0.25);
+
+            } else if (grossincome > 83333.33 && grossincome <= 333333.33) { // PHP 83,334 - PHP 333,333 (Bracket 5) 
+              tax = 35416.80 + ((grossincome - 83333) * 0.30);
+
+            } else { // PHP 333,333 and above (Bracket 6) 
+              tax = 183541.80 + ((grossincome - 333333) * 0.35);
+            }
 
             tax_contribTxtbox.Text = tax.ToString("n");
             }
@@ -307,33 +581,8 @@ namespace Activity5 {
         }
 
         private void new_btn_Click(object sender, EventArgs e) {
-            //codes for clearing the textboxes
-            emp_nuTxtbox.Clear();
-            firstnameTxtbox.Clear();
-            MNameTxtbox.Clear();
-            surTxtbox.Clear();
-            civil_statusTxtbox.Clear();
-            desigTxtbox.Clear();
-            numDependentTxtbox.Clear();
-            empStatusTxtbox.Clear();
-            DeptNameTxtbox.Clear();
-            basic_netincomeTxtbox.Clear();
-            basic_numhrsTxtbox.Clear();
-            basic_rateTxtbox.Clear();
-            hono_netincomeTxtbox.Clear();
-            hono_numhrsTxtbox.Clear();
-            hono_rateTxtbox.Clear();
-            other_netincomeTxtbox.Clear();
-            other_numhrsTxtbox.Clear();
-            other_rateTxtbox.Clear();
-            net_incomeTxtbox.Clear();
-            gross_incomeTxtbox.Clear();
-            sss_contribTxtbox.Clear();
-            pagibig_contribTxtbox.Clear();
-            philhealth_contribTxtbox.Clear();
-            tax_contribTxtbox.Clear();
-            sss_loanTxtbox.Clear();
-            pagibig_loanTxtbox.Clear();
+            //function for clearing the textboxes
+            cleartxtbox();
         }
 
         private void printPayslip_btn_Click(object sender, EventArgs e) {

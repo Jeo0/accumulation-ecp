@@ -41,7 +41,7 @@ namespace projectNamin
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoginFrm1 newmdi = new LoginFrm1();
+            A_LoginFrm1 newmdi = new A_LoginFrm1();
             this.Hide();
             newmdi.ShowDialog();
             this.Close();
