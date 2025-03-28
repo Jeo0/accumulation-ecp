@@ -13,5 +13,21 @@ public class MActivity5_class
         other_numhrs = 0.00,
         other_rate = 0.00;
  
+
+      public Double netincome = 0.00,
+              grossincome = 0.00,
+              sss_contrib = 0.00,
+              pagibig_contrib = 0.00,
+              philhealth_contrib = 0.00,
+              tax_contrib = 0.00;
+      public Double sss_loan = 0.00,
+              pagibig_loan = 0.00,
+              salary_loan = 0.00,
+              salary_savings = 0.00,
+              faculty_sav_loan = 0.00,
+              other_deduction = 0.00,
+              total_deduction = 0.00,
+              total_contrib = 0.00,
+              total_loan = 0.00;
 }
 
