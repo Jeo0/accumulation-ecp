@@ -42,13 +42,8 @@ namespace lesson3___example3
         private System.Windows.Forms.Timer timer;
 
         // form and can be access for one object to another
-        private double total_amount = 0;
-        private int total_qty = 0;
 
-        // change this if on another system
-        string variable = "C:\\Users\\Jude\\Downloads\\MIDTERMS_3RD YEAR_2ND SEM\\images_d\\";
-       // string imagePath = "E:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\images-lesson3(POS 2)\\";
-
+        Plesson3_class class3 = new Plesson3_class();
 
         /// //////////////////////////////////////////
         /// //////////////////////////////////////////
@@ -224,7 +219,7 @@ namespace lesson3___example3
               pizzaPic20
             };
             for (int iii=0; iii < pictureboxArr.Length; iii++){
-              pictureboxArr[iii].Image = System.Drawing.Image.FromFile(variable + "d" + Convert.ToString(iii+1) + ".jfif");
+              pictureboxArr[iii].Image = System.Drawing.Image.FromFile(class3.imagePath + "d" + Convert.ToString(iii+1) + ".jfif");
             }
 
             // to disable to checkboxes
@@ -241,10 +236,6 @@ namespace lesson3___example3
             carbonaraCheckBox.Enabled = false;
             famfriesCheckBox.Enabled = false;
             hawaiianCheckBox.Enabled = false;
-
-
-
-
         }
 
         /// ////////////////////////////////////////////////
@@ -273,7 +264,7 @@ namespace lesson3___example3
             FoodBundleBradiobtn.Checked = false;    // for food bundle B not to be selected
 
             //inserting image inside picturebox
-            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb1.jfif");
+            displayPictureBox.Image = System.Drawing.Image.FromFile(class3.imagePath + "fb1.jfif");
 
             // to check the checkboxes for A
             friedchickenCheckBox.Checked = true;
@@ -310,7 +301,7 @@ namespace lesson3___example3
             this.BackColor = Color.LightBlue;           // for changing the form background
             FoodBundleAradiobtn.Checked = false;        // for food bundle B not to be selected
 
-            displayPictureBox.Image = System.Drawing.Image.FromFile(variable + "fb2.jfif");        //inserting image inside picturebox
+            displayPictureBox.Image = System.Drawing.Image.FromFile(class3.imagePath + "fb2.jfif");        //inserting image inside picturebox
 
             // to check the checkboxes for A
             friedchickenCheckBox.Checked = false;
@@ -520,8 +511,8 @@ namespace lesson3___example3
             // Prevent negative calculations
             if (qty > 0) {
                 discounted_amount = (price * qty) - (discount_amount * qty);
-                total_qty += qty;
-                total_amount += discounted_amount;
+                class3.accumulateTotalQty(qty);
+                class3.accumulateTotalAmount(discounted_amount);
             }
             else {
                 discounted_amount = 0;
@@ -560,134 +551,117 @@ namespace lesson3___example3
         /// ////////////////////////////////////////////////////////////////////////
         /// ////////////////////////////////////////////////////////////////////////
         
-        private void setPriceAndAddListbox(double price, object namename){
-
-          discountAmountTxtBox.Text = "0.00";
-          priceTxtBox.Text = Convert.ToString(price);
-
-          // option 1: check before typecasting
-          if(namename is System.Windows.Forms.CheckBox checkBox){
-            displayListBox.Items.Add(checkBox.Text + " " + priceTxtBox.Text);
-          }
-
-          // option 2: direct casting assuming that namename is always a checkbox
-          //displayListBox.Items.Add((System.Windows.Forms.CheckBox)namename.Text);
-
-          quantityTxtBox.Text = "0";
-          quantityTxtBox.Focus();
-
-        }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e) {
-            setPriceAndAddListbox(500.99, checkBox2);
+            class3.setPriceAndAddListbox(500.99, checkBox2);
         }
 
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e) {
-          setPriceAndAddListbox(550.50,checkBox3);
+          class3.setPriceAndAddListbox(550.50,checkBox3);
 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e) {
 
-          setPriceAndAddListbox(600.99, checkBox4);
+          class3.setPriceAndAddListbox(600.99, checkBox4);
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(750.00, checkBox5);
+          class3.setPriceAndAddListbox(750.00, checkBox5);
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(500.00, checkBox6);
+          class3.setPriceAndAddListbox(500.00, checkBox6);
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(750.00, checkBox7);
+          class3.setPriceAndAddListbox(750.00, checkBox7);
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(700.00, checkBox8);
+          class3.setPriceAndAddListbox(700.00, checkBox8);
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(850.00, checkBox9);
+          class3.setPriceAndAddListbox(850.00, checkBox9);
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(450.00, checkBox10);
+          class3.setPriceAndAddListbox(450.00, checkBox10);
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(650.00, checkBox11);
+          class3.setPriceAndAddListbox(650.00, checkBox11);
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(575.00, checkBox12);
+          class3.setPriceAndAddListbox(575.00, checkBox12);
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(565.50, checkBox13);
+          class3.setPriceAndAddListbox(565.50, checkBox13);
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(580.50, checkBox14);
+          class3.setPriceAndAddListbox(580.50, checkBox14);
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(600.00, checkBox15);
+          class3.setPriceAndAddListbox(600.00, checkBox15);
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
 
-          setPriceAndAddListbox(545.00, checkBox16);
+          class3.setPriceAndAddListbox(545.00, checkBox16);
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListbox(505.00, checkBox17);
+          class3.setPriceAndAddListbox(505.00, checkBox17);
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListbox(490.00, checkBox18);
+          class3.setPriceAndAddListbox(490.00, checkBox18);
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListbox(555.00, checkBox19);
+          class3.setPriceAndAddListbox(555.00, checkBox19);
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListbox(615.00, checkBox20);
+          class3.setPriceAndAddListbox(615.00, checkBox20);
         }
 
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
         {
-          setPriceAndAddListbox(605.00, checkBox21);
+          class3.setPriceAndAddListbox(605.00, checkBox21);
         }
 
         /// ////////////////////////////////////////////////////////////////////////
