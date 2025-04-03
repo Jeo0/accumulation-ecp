@@ -26,7 +26,6 @@ namespace projectNamin
 
         private void MQuiz1_Load(object sender, EventArgs e)
         {
-            temp = 125125;
         }
 
         private void newEntry_btn_Click(object sender, EventArgs e)
@@ -74,10 +73,10 @@ namespace projectNamin
             // add lahat ng cred units into total units sa label45
             temp = 0;
             foreach (int iii in credArr) {
-                Console.WriteLine(iii + "\n");
                 temp += iii;  // accumulate
             }
             outputNaten[0].Text = Convert.ToString(temp);
+
             
 
             
