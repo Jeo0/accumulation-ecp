@@ -103,12 +103,17 @@ namespace Activity5 {
     private void tryCatchDouble(object namename){
       try {
         double tempname;
-        tempname = Convert.ToDouble( (System.Windows.Forms.TextBox)namename.Text);
+        if (namename is System.Windows.Forms.TextBox textboxnamin) {
+            tempname = Convert.ToDouble(textboxnamin.Text);
+        }
 
       } catch (Exception asd) {
         MessageBox.Show(asd.Message + " Make sure it is floating point number");
-        (System.Windows.Forms.TextBox)namename.Text = "0";
-        (System.Windows.Forms.TextBox)namename.Focus();
+
+        if (namename is System.Windows.Forms.TextBox textboxnamin) {
+            textboxnamin.Text = "0";
+            textboxnamin.Focus();
+        }
       }
     }
 
@@ -134,17 +139,17 @@ namespace Activity5 {
     private void cancel_btn_Click(object sender, EventArgs e) {
       // remove everything
       payslip_viewListBox.Items.Clear();
-      picpath = "";
+      class5.picpath = "";
 
-      basic_netincome = 0.00;
-      basic_numhrs = 0.00;
-      basic_rate = 0.00;
-      hono_netincome = 0.00;
-      hono_numhrs = 0.00;
-      hono_rate = 0.00;
-      other_netincome = 0.00;
-      other_numhrs = 0.00;
-      other_rate = 0.00;
+      class5.basic_netincome = 0.00;
+      class5.basic_numhrs = 0.00;
+      class5.basic_rate = 0.00;
+      class5.hono_netincome = 0.00;
+      class5.hono_numhrs = 0.00;
+      class5.hono_rate = 0.00;
+      class5.other_netincome = 0.00;
+      class5.other_numhrs = 0.00;
+      class5.other_rate = 0.00;
       
       class5.netincome = 0.00;
       class5.grossincome = 0.00;
@@ -269,13 +274,13 @@ namespace Activity5 {
       class5.grossincome = Convert.ToDouble(gross_incomeTxtbox.Text);
 
       //formula to compute the desired data to be computed
-      class5.total_contrib = class5.sss_contrib + class5.pagibig_contrib + class5.philhealth_contrib + tax_contrib;
-      class5.total_loan = class5.sss_loan + class5.pagibig_loan + class5.salary_loan + class5.faculty_sav_loan + class5.salary_savings + other_deduction;
-      class5.total_deduction = class5.total_contrib + total_loan;
+      class5.total_contrib = class5.sss_contrib + class5.pagibig_contrib + class5.philhealth_contrib + class5.tax_contrib;
+      class5.total_loan = class5.sss_loan + class5.pagibig_loan + class5.salary_loan + class5.faculty_sav_loan + class5.salary_savings + class5.other_deduction;
+      class5.total_deduction = class5.total_contrib + class5.total_loan;
 
       //codes for converting numeric data to string and displayed it inside the textboxes
-      total_deducTxtbox.Text = total_deduction.ToString("n");
-      class5.netincome = class5.grossincome - total_deduction;
+      total_deducTxtbox.Text = class5.total_deduction.ToString("n");
+      class5.netincome = class5.grossincome - class5.total_deduction;
       net_incomeTxtbox.Text = class5.netincome.ToString("n");
     }
 

@@ -12,32 +12,24 @@ public class Plesson3_class
 
 
 
-  public accumulateTotalQty(int iter){
+  public void accumulateTotalQty(int iter){
     this.total_qty += iter;
   }
 
 
-  public accumulateTotalAmount(double iter){
+  public void accumulateTotalAmount(double iter){
     this.total_amount += iter;
   }
 
-
-  public void setPriceAndAddListbox(double price, object namename){
-
-    discountAmountTxtBox.Text = "0.00";
-    priceTxtBox.Text = Convert.ToString(price);
-
-    // option 1: check before typecasting
-    if(namename is System.Windows.Forms.CheckBox checkBox){
-      displayListBox.Items.Add(checkBox.Text + " " + priceTxtBox.Text);
+    public int getTotalQty() {
+        return this.total_qty;
     }
 
-    // option 2: direct casting assuming that namename is always a checkbox
-    //displayListBox.Items.Add((System.Windows.Forms.CheckBox)namename.Text);
+    public int getTotalAmount() {
+        return (int)this.total_amount;
+    }
 
-    quantityTxtBox.Text = "0";
-    quantityTxtBox.Focus();
-  }
+
 
 
 }
