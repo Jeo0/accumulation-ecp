@@ -493,27 +493,27 @@
             label38.AutoSize = true;
             label38.Location = new Point(1232, 163);
             label38.Name = "label38";
-            label38.Size = new Size(22, 15);
+            label38.Size = new Size(40, 15);
             label38.TabIndex = 56;
-            label38.Text = "___";
+            label38.Text = "420.00";
             // 
             // label39
             // 
             label39.AutoSize = true;
             label39.Location = new Point(1232, 148);
             label39.Name = "label39";
-            label39.Size = new Size(22, 15);
+            label39.Size = new Size(46, 15);
             label39.TabIndex = 55;
-            label39.Text = "___";
+            label39.Text = "4550.00";
             // 
             // label40
             // 
             label40.AutoSize = true;
             label40.Location = new Point(1232, 133);
             label40.Name = "label40";
-            label40.Size = new Size(13, 15);
+            label40.Size = new Size(28, 15);
             label40.TabIndex = 54;
-            label40.Text = "0";
+            label40.Text = "0.00";
             // 
             // label41
             // 
@@ -650,7 +650,7 @@
             inp_yearlevel_cb.Size = new Size(258, 23);
             inp_yearlevel_cb.TabIndex = 67;
             // 
-            // MQuiz1
+            // MQUIZ2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -719,7 +719,7 @@
             Controls.Add(inp_program_cb);
             Controls.Add(label1);
             Controls.Add(Entries_lb);
-            Name = "MQuiz1";
+            Name = "MQUIZ2";
             Text = "MQuiz1";
             Load += MQuiz1_Load;
             ResumeLayout(false);
