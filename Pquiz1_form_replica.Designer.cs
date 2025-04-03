@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pquiz1_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pquiz1_form_replica));
             button1 = new Button();
             no_discount_button = new RadioButton();
             label10 = new Label();
@@ -196,7 +196,6 @@
             label10.Size = new Size(54, 13);
             label10.TabIndex = 15;
             label10.Text = "Change:";
-            
             // 
             // label9
             // 
@@ -209,7 +208,6 @@
             label9.Size = new Size(98, 13);
             label9.TabIndex = 14;
             label9.Text = "Cash Rendered:";
-            
             // 
             // employee_discount_button
             // 
@@ -506,7 +504,7 @@
             // pictureBox2
             // 
             pictureBox2.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Image = projectNamin.Properties.Resources.jalibi;
             pictureBox2.Location = new Point(142, 30);
             pictureBox2.Margin = new Padding(5);
             pictureBox2.Name = "pictureBox2";
@@ -801,7 +799,6 @@
             groupBox3.Size = new Size(380, 106);
             groupBox3.TabIndex = 113;
             groupBox3.TabStop = false;
-          
             // 
             // groupBox4
             // 
@@ -878,7 +875,6 @@
             groupBox4.TabIndex = 114;
             groupBox4.TabStop = false;
             groupBox4.Text = "Name";
-            
             // 
             // qrbox
             // 
@@ -1382,7 +1378,6 @@
             total_discount_txtbox.Name = "total_discount_txtbox";
             total_discount_txtbox.Size = new Size(213, 20);
             total_discount_txtbox.TabIndex = 11;
-          
             // 
             // total_quantity_txtbox
             // 
@@ -1533,7 +1528,7 @@
             dinnerBtn.UseVisualStyleBackColor = false;
             dinnerBtn.Click += dinnerBtn_Click;
             // 
-            // Pquiz1_form
+            // Pquiz1_form_replica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1555,7 +1550,7 @@
             Controls.Add(lunchBtn);
             Controls.Add(button1);
             Margin = new Padding(2);
-            Name = "Pquiz1_form";
+            Name = "Pquiz1_form_replica";
             Text = "Payroll 21";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
