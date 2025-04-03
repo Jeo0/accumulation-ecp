@@ -1,6 +1,6 @@
 ﻿namespace projectNamin
 {
-    partial class MQuiz1
+    partial class MQUIZ2
     {
         /// <summary>
         /// Required designer variable.

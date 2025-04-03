@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace projectNamin
 {
-    public partial class MQuiz1 : Form
+    public partial class MQUIZ2 : Form
     {
         // arrays set to 400 max entries
         public int[] lecArr = new int[400];
@@ -19,7 +19,7 @@ namespace projectNamin
         public int[] credArr = new int[400];
         int temp = 0;
 
-        public MQuiz1()
+        public MQUIZ2()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace projectNamin
 
         private void newEntry_btn_Click(object sender, EventArgs e)
         {
-            MQUIZ1_ENTRY_FORM inputForTheEntries_form = new MQUIZ1_ENTRY_FORM();
+            MQUIZ2_ENTRY_FORM inputForTheEntries_form = new MQUIZ2_ENTRY_FORM();
 
             // add it to other cache
             inputForTheEntries_form.inp_cache_lb.Items.AddRange(this.Entries_lb.Items);

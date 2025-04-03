@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace projectNamin
 {
-    public partial class MQUIZ1_ENTRY_FORM : Form
+    public partial class MQUIZ2_ENTRY_FORM : Form
     {
-        public MQUIZ1_ENTRY_FORM()
+        public MQUIZ2_ENTRY_FORM()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace projectNamin
                 );
 
             // now add it to the other form 
-            MQuiz1 entriesDoonSaKabila = new MQuiz1();
+            MQUIZ2 entriesDoonSaKabila = new MQUIZ2();
             entriesDoonSaKabila.Entries_lb.Items.AddRange(this.inp_cache_lb.Items);
 
             // for processing

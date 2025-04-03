@@ -30,8 +30,8 @@ namespace projectNamin
 
             //Application.Run(new A_LoginFrm1()); // for login to act 5
 
-            Application.Run(new Activity5.MActivity5_form());
-           // Application.Run(new MQuiz1());
+            //Application.Run(new Activity5.MActivity5_form());
+            Application.Run(new MQuiz1());
 
 
 
