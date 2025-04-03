@@ -19,11 +19,18 @@ namespace projectNamin
             //Application.Run(new Plesson3_form());
             //Application.Run(new Pquiz1_form());    
 
-            //Application.Run(new A_LoginFrm1());
-            //Application.Run(new Pquiz1_form_replica());
-            //
-            Application.Run(new Plesson3_form());
+
+            //Application.Run(new LoginFrm1()); // for login to act 5
             //Application.Run(new Activity5.MActivity5_form());
+            //Application.Run(new Activity5.MActivity5_form_replica());
+            
+
+           // Application.Run(new Plesson3_form());
+            //Application.Run(new Pquiz1_form());    
+
+            //Application.Run(new A_LoginFrm1()); // for login to act 5
+
+            Application.Run(new Activity5.MActivity5_form());
            // Application.Run(new MQuiz1());
 
 
