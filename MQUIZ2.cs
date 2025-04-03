@@ -49,7 +49,7 @@ namespace projectNamin
                 label44,    // Total tuition fee
                 label43,    // total misc fee
                 label42,    // Other school fees
-                label41,    // computer laboratory fee
+                label41,    // computer laboratory fee  outputNaten[4]
                 label40,    // sap fee
                 label39,    // CICSO lab fee
                 label38,    // exam booklent 
@@ -70,6 +70,16 @@ namespace projectNamin
                 label26    // grandtotla
             };
 
+            ////////////////////////////////
+            ////////////////////////////////
+            ////////////////////////////////
+            // 
+            // processing
+            // 
+            ////////////////////////////////
+            ////////////////////////////////
+            ////////////////////////////////
+
             // add lahat ng cred units into total units sa label45
             temp = 0;
             foreach (int iii in credArr) {
@@ -77,9 +87,25 @@ namespace projectNamin
             }
             outputNaten[0].Text = Convert.ToString(temp);
 
-            
+            // computer laboratory fee
+            // label41 
+            // outputNaten[4]
 
-            
+            // Lecture fee (tuition)
+            // label44
+            // outputNaten[1]
+
+            // Miscellaneous fee
+            // label43
+            // outputNaten[2]
+
+            // installment charges
+            // if mode == full payment
+
+
+
+
+
 
         }
     }
