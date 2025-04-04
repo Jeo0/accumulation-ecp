@@ -92,6 +92,8 @@
             inp_yearlevel_cb = new ComboBox();
             label53 = new Label();
             label54 = new Label();
+            label55 = new Label();
+            label56 = new Label();
             SuspendLayout();
             // 
             // Entries_lb
@@ -250,7 +252,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(42, 202);
+            label10.Location = new Point(73, 202);
             label10.Name = "label10";
             label10.Size = new Size(75, 15);
             label10.TabIndex = 22;
@@ -259,7 +261,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(169, 202);
+            label11.Location = new Point(186, 202);
             label11.Name = "label11";
             label11.Size = new Size(46, 15);
             label11.TabIndex = 23;
@@ -268,7 +270,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(316, 202);
+            label12.Location = new Point(246, 203);
             label12.Name = "label12";
             label12.Size = new Size(67, 15);
             label12.TabIndex = 24;
@@ -277,7 +279,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(623, 202);
+            label13.Location = new Point(504, 203);
             label13.Name = "label13";
             label13.Size = new Size(65, 15);
             label13.TabIndex = 27;
@@ -286,7 +288,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(582, 202);
+            label14.Location = new Point(463, 203);
             label14.Name = "label14";
             label14.Size = new Size(26, 15);
             label14.TabIndex = 26;
@@ -295,7 +297,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(455, 202);
+            label15.Location = new Point(416, 203);
             label15.Name = "label15";
             label15.Size = new Size(25, 15);
             label15.TabIndex = 25;
@@ -313,7 +315,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(836, 202);
+            label17.Location = new Point(686, 203);
             label17.Name = "label17";
             label17.Size = new Size(27, 15);
             label17.TabIndex = 29;
@@ -322,7 +324,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(694, 202);
+            label18.Location = new Point(624, 203);
             label18.Name = "label18";
             label18.Size = new Size(33, 15);
             label18.TabIndex = 28;
@@ -331,27 +333,30 @@
             // label19
             // 
             label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label19.Location = new Point(1032, 19);
             label19.Name = "label19";
-            label19.Size = new Size(62, 15);
+            label19.Size = new Size(66, 15);
             label19.TabIndex = 31;
             label19.Text = "Total Units";
             // 
             // label20
             // 
             label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label20.Location = new Point(1032, 47);
             label20.Name = "label20";
-            label20.Size = new Size(93, 15);
+            label20.Size = new Size(98, 15);
             label20.TabIndex = 32;
             label20.Text = "Total Tuition Fee";
             // 
             // label21
             // 
             label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label21.Location = new Point(1032, 72);
             label21.Name = "label21";
-            label21.Size = new Size(89, 15);
+            label21.Size = new Size(93, 15);
             label21.TabIndex = 33;
             label21.Text = "Total Misc. Fees";
             // 
@@ -394,9 +399,10 @@
             // label27
             // 
             label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label27.Location = new Point(1032, 190);
             label27.Name = "label27";
-            label27.Size = new Size(130, 15);
+            label27.Size = new Size(138, 15);
             label27.TabIndex = 39;
             label27.Text = "Total Other School Fees";
             // 
@@ -412,9 +418,10 @@
             // label29
             // 
             label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label29.Location = new Point(1032, 258);
             label29.Name = "label29";
-            label29.Size = new Size(104, 15);
+            label29.Size = new Size(108, 15);
             label29.TabIndex = 41;
             label29.Text = "Mode Of Payment";
             // 
@@ -430,18 +437,20 @@
             // label31
             // 
             label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label31.Location = new Point(1032, 282);
             label31.Name = "label31";
-            label31.Size = new Size(107, 15);
+            label31.Size = new Size(112, 15);
             label31.TabIndex = 42;
             label31.Text = "Installment Charge";
             // 
             // label32
             // 
             label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label32.Location = new Point(1032, 392);
             label32.Name = "label32";
-            label32.Size = new Size(75, 15);
+            label32.Size = new Size(78, 15);
             label32.TabIndex = 45;
             label32.Text = "Amount Due";
             // 
@@ -475,15 +484,17 @@
             // label36
             // 
             label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label36.Location = new Point(1032, 417);
             label36.Name = "label36";
-            label36.Size = new Size(67, 15);
+            label36.Size = new Size(71, 15);
             label36.TabIndex = 48;
             label36.Text = "Grand Total";
             // 
             // label37
             // 
             label37.AutoSize = true;
+            label37.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label37.Location = new Point(1281, 190);
             label37.Name = "label37";
             label37.Size = new Size(22, 15);
@@ -538,7 +549,8 @@
             // label43
             // 
             label43.AutoSize = true;
-            label43.Location = new Point(1230, 72);
+            label43.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label43.Location = new Point(1281, 75);
             label43.Name = "label43";
             label43.Size = new Size(22, 15);
             label43.TabIndex = 51;
@@ -547,7 +559,8 @@
             // label44
             // 
             label44.AutoSize = true;
-            label44.Location = new Point(1230, 47);
+            label44.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label44.Location = new Point(1281, 50);
             label44.Name = "label44";
             label44.Size = new Size(22, 15);
             label44.TabIndex = 50;
@@ -556,16 +569,18 @@
             // label45
             // 
             label45.AutoSize = true;
-            label45.Location = new Point(1230, 19);
+            label45.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label45.Location = new Point(1281, 22);
             label45.Name = "label45";
-            label45.Size = new Size(14, 15);
+            label45.Size = new Size(22, 15);
             label45.TabIndex = 49;
-            label45.Text = "g";
+            label45.Text = "___";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(1248, 417);
+            label26.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label26.Location = new Point(1281, 417);
             label26.Name = "label26";
             label26.Size = new Size(22, 15);
             label26.TabIndex = 65;
@@ -592,7 +607,8 @@
             // label48
             // 
             label48.AutoSize = true;
-            label48.Location = new Point(1248, 392);
+            label48.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label48.Location = new Point(1281, 392);
             label48.Name = "label48";
             label48.Size = new Size(22, 15);
             label48.TabIndex = 62;
@@ -619,15 +635,17 @@
             // label51
             // 
             label51.AutoSize = true;
+            label51.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label51.Location = new Point(1248, 282);
             label51.Name = "label51";
-            label51.Size = new Size(31, 15);
+            label51.Size = new Size(35, 15);
             label51.TabIndex = 59;
             label51.Text = "1200";
             // 
             // label52
             // 
             label52.AutoSize = true;
+            label52.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label52.Location = new Point(1248, 258);
             label52.Name = "label52";
             label52.Size = new Size(22, 15);
@@ -655,20 +673,42 @@
             // label53
             // 
             label53.AutoSize = true;
+            label53.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label53.Location = new Point(1032, 233);
             label53.Name = "label53";
-            label53.Size = new Size(121, 15);
+            label53.Size = new Size(126, 15);
             label53.TabIndex = 68;
             label53.Text = "Total Tuition and Fees";
             // 
             // label54
             // 
             label54.AutoSize = true;
+            label54.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label54.Location = new Point(1248, 233);
             label54.Name = "label54";
             label54.Size = new Size(22, 15);
             label54.TabIndex = 69;
             label54.Text = "___";
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label55.Location = new Point(1210, 417);
+            label55.Name = "label55";
+            label55.Size = new Size(30, 15);
+            label55.TabIndex = 71;
+            label55.Text = "PHP";
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label56.Location = new Point(1210, 392);
+            label56.Name = "label56";
+            label56.Size = new Size(30, 15);
+            label56.TabIndex = 70;
+            label56.Text = "PHP";
             // 
             // MQUIZ2
             // 
@@ -677,6 +717,8 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(1340, 596);
+            Controls.Add(label55);
+            Controls.Add(label56);
             Controls.Add(label54);
             Controls.Add(label53);
             Controls.Add(inp_yearlevel_cb);
@@ -750,20 +792,15 @@
 
         #endregion
         private Label label1;
-        private ComboBox inp_program_cb;
-        private DateTimePicker inp_dateenrolled_dp;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox inp_studentnumber_tb;
-        private TextBox inp_studentname_tb;
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
-        private ComboBox inp_scholar_cb;
         private Label label8;
         private Button recompute_btn;
         private Button newEntry_btn;
@@ -810,11 +847,18 @@
         private Label label50;
         private Label label51;
         private Label label52;
-        private ComboBox inp_mode_cb;
-        private ComboBox inp_yearlevel_cb;
         public ListBox Entries_lb;
         public Label label19;
         private Label label53;
         private Label label54;
+        public ComboBox inp_program_cb;
+        public DateTimePicker inp_dateenrolled_dp;
+        public TextBox inp_studentnumber_tb;
+        public TextBox inp_studentname_tb;
+        public ComboBox inp_scholar_cb;
+        public ComboBox inp_mode_cb;
+        public ComboBox inp_yearlevel_cb;
+        private Label label55;
+        private Label label56;
     }
 }
