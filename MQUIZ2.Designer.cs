@@ -556,9 +556,9 @@
             label45.AutoSize = true;
             label45.Location = new Point(1230, 19);
             label45.Name = "label45";
-            label45.Size = new Size(22, 15);
+            label45.Size = new Size(14, 15);
             label45.TabIndex = 49;
-            label45.Text = "___";
+            label45.Text = "g";
             // 
             // label26
             // 

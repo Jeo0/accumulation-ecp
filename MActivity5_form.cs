@@ -306,7 +306,7 @@ namespace Activity5 {
 
 
     private void basic_numhrsTxtbox_TextChanged(object sender, EventArgs e) {
-      // this was already declared in Class1 class
+      // this was already declared in Student class
       // double basic_numhrs = 0, basic_rate = 0, basic_netincome = 0;
 
       // check basic_numhrs
@@ -399,7 +399,7 @@ namespace Activity5 {
 
 
       try {
-          // samething; alreay declared in Class1 class
+          // samething; alreay declared in Student class
           // double other_numhrs = 0, other_rate = 0, other_netincome = 0, grossincome = 0;
           // double basic_netincome = 0, hono_netincome = 0;
 
