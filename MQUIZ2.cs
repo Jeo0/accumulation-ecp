@@ -20,7 +20,7 @@ namespace projectNamin
         public int[] lecArr = new int[sizeMax];
         public int[] labArr = new int[sizeMax];
         public int[] credArr = new int[sizeMax];
-        // Student student = new Student();
+        Student student = new Student();
         int temp = 0;
 
         public MQUIZ2() {
@@ -61,29 +61,30 @@ namespace projectNamin
         {
             System.Windows.Forms.Label[] outputNaten =
             {
-                label45,    // Total units
-                label44,    // Total tuition fee
+                label45,    // total units
+                label44,    // total tuition fee
                 label43,    // total misc fee
-                label42,    // Other school fees
+                label42,    // other school fees
                 label41,    // computer laboratory fee  outputNaten[4]
                 label40,    // sap fee
-                label39,    // CICSO lab fee
-                label38,    // exam booklent 
-                label37,    // total other shcool fee
+                label39,    // CISCO lab fee
+                label38,    // exam booklet 
+                label37,    // total other school fee
             };
 
             System.Windows.Forms.Label[] outputSecond =
             {
+                label54,    // total tuition and fees
                 label52,    // mode of payment
                 label51,    // installment charge
-                label50,    // dwonpayemy
-                label49,    // firs tinstallment
+                label50,    // down payment
+                label49,    // first installment 1st
 
-                label47,    // second installment
-                label46,    // 3thd einstallment
+                label47,    // second installment 2nd
+                label46,    // third installment 3rd
 
                 label48,   // amount due
-                label26    // grandtotla
+                label26    // grand total
             };
 
             ////////////////////////////////
@@ -127,7 +128,6 @@ namespace projectNamin
                 //Debug.WriteLine("total temp: {0}\n\n", temp);
             }
             int labFee = temp * 2500; // 2500 per lab unit
-            outputNaten[4].Text = Convert.ToString(labFee);
 
 
             // Lecture fee (tuition)
@@ -140,8 +140,43 @@ namespace projectNamin
             // outputNaten[2]
 
 
-            // installment charges
-            // if mode == full payment
+            // total tuition and fees
+            // label 54
+            // outputSecond[0]
+            if(inp_mode_cb.SelectedItem != null) {
+                double discount = 0;
+
+                switch (inp_mode_cb.SelectedItem.ToString()) {
+                    case "Full Payment":
+                        discount = 0.1;
+
+                        // installment charges
+                        // those are constants
+                        student.downpayment = 0;
+                        student.first_installment = 0;
+                        student.second_installment = 0;
+                        student.third_installment = 0;
+                        break;
+
+                    case "Installment":
+                        discount = -0.15;
+
+                        student.downpayment = 300;
+                        student.first_installment = 300;
+                        student.second_installment = 300;
+                        student.third_installment = 300;
+                        break;
+                }
+                student.total_tuition_and_fees *= (1 - discount);
+            }
+
+
+
+
+
+            // set the texts
+            outputNaten[4].Text = Convert.ToString(labFee); // label41 computer laboratory fee
+            outputSecond[0].Text = Convert.ToString(student.total_tuition_and_fees); // label54 total tuition and fees
 
 
 

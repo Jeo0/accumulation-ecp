@@ -90,6 +90,8 @@
             label52 = new Label();
             inp_mode_cb = new ComboBox();
             inp_yearlevel_cb = new ComboBox();
+            label53 = new Label();
+            label54 = new Label();
             SuspendLayout();
             // 
             // Entries_lb
@@ -650,6 +652,24 @@
             inp_yearlevel_cb.Size = new Size(258, 23);
             inp_yearlevel_cb.TabIndex = 67;
             // 
+            // label53
+            // 
+            label53.AutoSize = true;
+            label53.Location = new Point(1032, 233);
+            label53.Name = "label53";
+            label53.Size = new Size(121, 15);
+            label53.TabIndex = 68;
+            label53.Text = "Total Tuition and Fees";
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Location = new Point(1248, 233);
+            label54.Name = "label54";
+            label54.Size = new Size(22, 15);
+            label54.TabIndex = 69;
+            label54.Text = "___";
+            // 
             // MQUIZ2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -657,6 +677,8 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(1340, 596);
+            Controls.Add(label54);
+            Controls.Add(label53);
             Controls.Add(inp_yearlevel_cb);
             Controls.Add(inp_mode_cb);
             Controls.Add(label26);
@@ -792,5 +814,7 @@
         private ComboBox inp_yearlevel_cb;
         public ListBox Entries_lb;
         public Label label19;
+        private Label label53;
+        private Label label54;
     }
 }
