@@ -137,7 +137,7 @@ namespace projectNamin
             int tuitionFee = 0;
             for (int iii = 0; iii < sizeMax; iii++)
             {
-                tuitionFee += lecArr[iii] * 1500; // 1500 per lab unit
+                tuitionFee += lecArr[iii] * 1500; // 1500 per lec unit
             }
             outputNaten[1].Text = tuitionFee.ToString();
 
