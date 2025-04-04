@@ -133,12 +133,24 @@ namespace projectNamin
             // Lecture fee (tuition)
             // label44
             // outputNaten[1]
+            
+            int tuitionFee = 0;
+            for (int iii = 0; iii < sizeMax; iii++)
+            {
+                tuitionFee += lecArr[iii] * 1500; // 1500 per lab unit
+            }
+            outputNaten[1].Text = tuitionFee.ToString();
 
+            //Total other school fees
+            int sapFee = 0, ciscoLabFee = 4550, examBookRent = 420;
+            int otherSchoolFees = labFee + sapFee + ciscoLabFee + examBookRent;
+            outputNaten[8].Text = otherSchoolFees.ToString();
 
             // Miscellaneous fee
             // label43
             // outputNaten[2]
-
+            int miscFee = otherSchoolFees + tuitionFee;
+            outputNaten[2].Text = miscFee.ToString();
 
             // installment charges
             // if mode == full payment
