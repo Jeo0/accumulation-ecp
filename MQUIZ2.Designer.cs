@@ -556,9 +556,9 @@
             label45.AutoSize = true;
             label45.Location = new Point(1230, 19);
             label45.Name = "label45";
-            label45.Size = new Size(22, 15);
+            label45.Size = new Size(14, 15);
             label45.TabIndex = 49;
-            label45.Text = "___";
+            label45.Text = "g";
             // 
             // label26
             // 
@@ -650,7 +650,7 @@
             inp_yearlevel_cb.Size = new Size(258, 23);
             inp_yearlevel_cb.TabIndex = 67;
             // 
-            // MQuiz1
+            // MQUIZ2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -719,7 +719,7 @@
             Controls.Add(inp_program_cb);
             Controls.Add(label1);
             Controls.Add(Entries_lb);
-            Name = "MQuiz1";
+            Name = "MQUIZ2";
             Text = "MQuiz1";
             Load += MQuiz1_Load;
             ResumeLayout(false);
