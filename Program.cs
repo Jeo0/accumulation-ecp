@@ -23,7 +23,7 @@ namespace projectNamin
             //Application.Run(new LoginFrm1()); // for login to act 5
             //Application.Run(new Activity5.MActivity5_form());
             //Application.Run(new Activity5.MActivity5_form_replica());
-            
+
 
             //Application.Run(new Plesson3_form());
             //Application.Run(new Pquiz1_form());    
@@ -31,7 +31,8 @@ namespace projectNamin
             //Application.Run(new A_LoginFrm1()); // for login to act 5
 
             //Application.Run(new Activity5.MActivity5_form());
-            Application.Run(new MQUIZ2());
+            //Application.Run(new MQUIZ2());
+            Application.Run(new Flesson13());
 
 
 
