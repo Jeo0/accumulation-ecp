@@ -43,6 +43,7 @@
             label2 = new Label();
             label4 = new Label();
             pictureBox = new PictureBox();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
@@ -91,6 +92,7 @@
             editBtn.TabIndex = 9;
             editBtn.Text = "Edit";
             editBtn.UseVisualStyleBackColor = true;
+            editBtn.Click += editBtn_Click;
             // 
             // cancelBtn
             // 
@@ -100,6 +102,7 @@
             cancelBtn.TabIndex = 10;
             cancelBtn.Text = "Cancel";
             cancelBtn.UseVisualStyleBackColor = true;
+            cancelBtn.Click += cancelBtn_Click;
             // 
             // newBtn
             // 
@@ -109,6 +112,7 @@
             newBtn.TabIndex = 11;
             newBtn.Text = "New";
             newBtn.UseVisualStyleBackColor = true;
+            newBtn.Click += newBtn_Click;
             // 
             // deleteBtn
             // 
@@ -118,6 +122,7 @@
             deleteBtn.TabIndex = 14;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // searchBtn
             // 
@@ -127,6 +132,7 @@
             searchBtn.TabIndex = 13;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.Click += searchBtn_Click;
             // 
             // saveBtn
             // 
@@ -170,11 +176,17 @@
             // 
             // pictureBox
             // 
+            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox.Location = new Point(12, 12);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(352, 426);
             pictureBox.TabIndex = 18;
             pictureBox.TabStop = false;
+            pictureBox.Click += pictureBox_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // Flesson13
             // 
@@ -222,5 +234,6 @@
         private Label label2;
         private Label label4;
         private PictureBox pictureBox;
+        private OpenFileDialog openFileDialog1;
     }
 }
