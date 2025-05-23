@@ -56,6 +56,12 @@
   
 
   <ItemGroup>
+    <Compile Update="F3_class_lesson13 .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="F3_fcn_lesson13.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="F3_class_lesson13.cs">
       <SubType>Form</SubType>
     </Compile>

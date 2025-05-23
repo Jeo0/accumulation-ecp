@@ -43,6 +43,7 @@
             label2 = new Label();
             label4 = new Label();
             pictureBox = new PictureBox();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // departmentTxtBox
             // 
+            departmentTxtBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             departmentTxtBox.Location = new Point(518, 104);
             departmentTxtBox.Name = "departmentTxtBox";
             departmentTxtBox.Size = new Size(270, 23);
@@ -64,6 +66,7 @@
             // 
             // studentNameTxtBox
             // 
+            studentNameTxtBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             studentNameTxtBox.Location = new Point(518, 75);
             studentNameTxtBox.Name = "studentNameTxtBox";
             studentNameTxtBox.Size = new Size(270, 23);
@@ -71,6 +74,7 @@
             // 
             // studentNumTxtBox
             // 
+            studentNumTxtBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studentNumTxtBox.Location = new Point(518, 46);
             studentNumTxtBox.Name = "studentNumTxtBox";
             studentNumTxtBox.Size = new Size(270, 23);
@@ -85,57 +89,74 @@
             // 
             // editBtn
             // 
+            editBtn.BackColor = SystemColors.ActiveCaption;
+            editBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             editBtn.Location = new Point(370, 397);
             editBtn.Name = "editBtn";
             editBtn.Size = new Size(126, 41);
             editBtn.TabIndex = 9;
             editBtn.Text = "Edit";
-            editBtn.UseVisualStyleBackColor = true;
+            editBtn.UseVisualStyleBackColor = false;
+            editBtn.Click += editBtn_Click;
             // 
             // cancelBtn
             // 
+            cancelBtn.BackColor = SystemColors.ActiveCaption;
+            cancelBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             cancelBtn.Location = new Point(518, 397);
             cancelBtn.Name = "cancelBtn";
             cancelBtn.Size = new Size(126, 41);
             cancelBtn.TabIndex = 10;
             cancelBtn.Text = "Cancel";
-            cancelBtn.UseVisualStyleBackColor = true;
+            cancelBtn.UseVisualStyleBackColor = false;
+            cancelBtn.Click += cancelBtn_Click;
             // 
             // newBtn
             // 
+            newBtn.BackColor = SystemColors.ActiveCaption;
+            newBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             newBtn.Location = new Point(662, 397);
             newBtn.Name = "newBtn";
             newBtn.Size = new Size(126, 41);
             newBtn.TabIndex = 11;
             newBtn.Text = "New";
-            newBtn.UseVisualStyleBackColor = true;
+            newBtn.UseVisualStyleBackColor = false;
+            newBtn.Click += newBtn_Click;
             // 
             // deleteBtn
             // 
+            deleteBtn.BackColor = SystemColors.ActiveCaption;
+            deleteBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             deleteBtn.Location = new Point(662, 343);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(126, 41);
             deleteBtn.TabIndex = 14;
             deleteBtn.Text = "Delete";
-            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // searchBtn
             // 
+            searchBtn.BackColor = SystemColors.ActiveCaption;
+            searchBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             searchBtn.Location = new Point(518, 343);
             searchBtn.Name = "searchBtn";
             searchBtn.Size = new Size(126, 41);
             searchBtn.TabIndex = 13;
             searchBtn.Text = "Search";
-            searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.UseVisualStyleBackColor = false;
+            searchBtn.Click += searchBtn_Click;
             // 
             // saveBtn
             // 
+            saveBtn.BackColor = SystemColors.ActiveCaption;
+            saveBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             saveBtn.Location = new Point(370, 343);
             saveBtn.Name = "saveBtn";
             saveBtn.Size = new Size(126, 41);
             saveBtn.TabIndex = 12;
             saveBtn.Text = "Save";
-            saveBtn.UseVisualStyleBackColor = true;
+            saveBtn.UseVisualStyleBackColor = false;
             saveBtn.Click += saveBtn_Click;
             // 
             // label1
@@ -170,16 +191,24 @@
             // 
             // pictureBox
             // 
+            pictureBox.BorderStyle = BorderStyle.Fixed3D;
             pictureBox.Location = new Point(12, 12);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(352, 426);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.TabIndex = 18;
             pictureBox.TabStop = false;
+            pictureBox.Click += pictureBox_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // Flesson13
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox);
             Controls.Add(label4);
@@ -222,5 +251,6 @@
         private Label label2;
         private Label label4;
         private PictureBox pictureBox;
+        private OpenFileDialog openFileDialog1;
     }
 }
