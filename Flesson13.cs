@@ -93,7 +93,13 @@ namespace projectNamin
             dataGridView.DataSource = dset.Tables[0];
 
             //clearing of text boxes after saving the data to the database
+<<<<<<< HEAD
             pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "fb1.jfif");
+=======
+
+            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
@@ -105,38 +111,59 @@ namespace projectNamin
         private void searchBtn_Click(object sender, EventArgs e)
         {
             connection.Open();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             //mssql query to display the contents of student table located inside the database
             sql = "SELECT * FROM studentTbl WHERE student_id = '" + studentNumTxtBox.Text + "'";
             command = new SqlCommand(sql, connection);
             command.CommandType = CommandType.Text;
 
+<<<<<<< HEAD
             //codes for mediating the language or world of C# and MSSQL
+=======
+            //codes for mediating the language or world of C# and MSSQL 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             adaptersql = new SqlDataAdapter();
             adaptersql.SelectCommand = command;
             command.ExecuteNonQuery();
 
+<<<<<<< HEAD
             //codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio
+=======
+            //codes for mirroring the contents of the database inside the MSSQL going to  C# or Visual Studio 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             dset = new DataSet();
             adaptersql.Fill(dset, "studentTbl");
 
             //codes for displaying the contents of student table to the inside of data grid view
             dataGridView.DataSource = dset.Tables[0];
 
+<<<<<<< HEAD
             //codes for displaying the contents of the student table to the textboxes
+=======
+            //codes for displaying the contents of the student table to the textboxes 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             studentNameTxtBox.Text = dset.Tables[0].Rows[0][1].ToString();
             departmentTxtBox.Text = dset.Tables[0].Rows[0][2].ToString();
             picturepathTxtBox.Text = dset.Tables[0].Rows[0][3].ToString();
             pictureBox.Image = System.Drawing.Image.FromFile(picturepathTxtBox.Text);
+<<<<<<< HEAD
 
             //displaying the save image using the file location to the picturebox
             //codes for closing the connection between the database inside MSSQL to Visual Studio
+=======
+            //displaying the save image using the file location to the picturebox 
+            //codes for closing the connection between the database inside MSSQL to  Visual Studio
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             connection.Close();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             connection.Open();
+<<<<<<< HEAD
 
             //mssql query to modify the contents of student table located inside the database
             sql = "DELETE FROM studentTbl WHERE student_id ='" + studentNumTxtBox.Text + "' ";
@@ -144,6 +171,14 @@ namespace projectNamin
             command.CommandType = CommandType.Text;
 
             //codes for mediating the language or world of C# and MSSQL
+=======
+            //mssql query to modify the contents of student table located inside the database
+            sql = "DELETE FROM studentTbl WHERE student_id ='" + studentNumTxtBox.Text + "'";
+            command = new SqlCommand(sql, connection);
+            command.CommandType = CommandType.Text;
+
+            //codes for mediating the language or world of C# and MSSQL 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             adaptersql = new SqlDataAdapter();
             adaptersql.DeleteCommand = command;
             command.ExecuteNonQuery();
@@ -153,11 +188,16 @@ namespace projectNamin
             command = new SqlCommand(sql, connection);
             command.CommandType = CommandType.Text;
 
+<<<<<<< HEAD
             //codes for mediating the language or world of C# and MSSQL
+=======
+            //codes for mediating the language or world of C# and MSSQL 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             adaptersql = new SqlDataAdapter();
             adaptersql.SelectCommand = command;
             command.ExecuteNonQuery();
 
+<<<<<<< HEAD
             //codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio
             dset = new DataSet();
             adaptersql.Fill(dset, "studentTbl");
@@ -165,6 +205,16 @@ namespace projectNamin
             //codes for displaying the contents of student table to the inside of data grid view
             dataGridView.DataSource = dset.Tables[0];
             pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "fb2.jfif");
+=======
+            //codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio 
+            dset = new DataSet();
+            adaptersql.Fill(dset, "studentTbl");
+
+            //codes for displaying the contents of student table to the inside of data  grid view
+            dataGridView.DataSource = dset.Tables[0];
+            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             connection.Close();
         }
 
@@ -172,43 +222,80 @@ namespace projectNamin
         {
             connection.Open();
             //mssql query to modify the contents of student table located inside the database
+<<<<<<< HEAD
             sql = "UPDATE studentTbl SET student_name = '" + studentNameTxtBox.Text + "', department = '" + departmentTxtBox.Text + "', picpath = '" + picturepathTxtBox.Text + "' WHERE student_id = '" + studentNumTxtBox.Text + "' ";
             command = new SqlCommand(sql, connection);
             command.CommandType = CommandType.Text;
 
             //codes for mediating the language or world of C# and MSSQL
+=======
+            sql = "UPDATE studentTbl SET student_name = '" + studentNameTxtBox.Text + "', department = '" + departmentTxtBox.Text + "', picpath = '" +
+            picturepathTxtBox.Text + "' WHERE student_id = '" + studentNumTxtBox.Text + "' ";
+            command = new SqlCommand(sql, connection);
+            command.CommandType = CommandType.Text;
+
+
+
+            //codes for mediating the language or world of C# and MSSQL 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             adaptersql = new SqlDataAdapter();
             adaptersql.UpdateCommand = command;
             command.ExecuteNonQuery();
 
+<<<<<<< HEAD
             //mssql query to display the contents of student table located inside the database
+=======
+            //mssql query to display the contents of student table located inside the  database
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             sql = "SELECT * FROM studentTbl ";
             command = new SqlCommand(sql, connection);
             command.CommandType = CommandType.Text;
 
+<<<<<<< HEAD
             //codes for mediating the language or world of C# and MSSQL
+=======
+            //codes for mediating the language or world of C# and MSSQL 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             adaptersql = new SqlDataAdapter();
             adaptersql.SelectCommand = command;
             command.ExecuteNonQuery();
 
+<<<<<<< HEAD
             //codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio
+=======
+            //codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio 
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             dset = new DataSet();
             adaptersql.Fill(dset, "studentTbl");
 
             //codes for displaying the contents of student table to the inside of data grid view
             dataGridView.DataSource = dset.Tables[0];
+<<<<<<< HEAD
             pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "d1.jfif");
 
+=======
+            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
             picturepathTxtBox.Clear();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             connection.Close();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "d2.jfif");
+=======
+            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
@@ -217,7 +304,12 @@ namespace projectNamin
 
         private void newBtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "d2.jfif");
+=======
+            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
@@ -226,6 +318,7 @@ namespace projectNamin
 
         private void pictureBox_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //codes for inserting picture from the local file to the picturebox
             openFileDialog1.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp; *.jfif";
 
@@ -234,6 +327,16 @@ namespace projectNamin
             pictureBox.Image = System.Drawing.Image.FromFile(openFileDialog1.FileName);//inserting of selected image to the picturebox shwon in the GUI interface
             picpath = openFileDialog1.FileName;//storing the file location of the selected image inserted in picturebox to a variable
             picturepathTxtBox.Text = picpath;//displaying the file location of the image stored in a variable to the textbox
+=======
+            //codes for inserting picture from the local file to the picturebox 
+            openFileDialog1.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp";
+            //filtering of image display using specific file extension 
+            openFileDialog1.ShowDialog();//displaying the file dialogbox where the posible image located
+            pictureBox.Image = System.Drawing.Image.FromFile(openFileDialog1.FileName);//inserting of  selected image to the picturebox shwon in the GUI interface
+                         picpath = openFileDialog1.FileName;//storing the file location of the  selected image inserted in picturebox to a variable
+            picturepathTxtBox.Text = picpath;//displaying the file location of the image stored in a variable to the textbox
+
+>>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
     }
 }
 }

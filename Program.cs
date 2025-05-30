@@ -32,7 +32,9 @@ namespace projectNamin
 
             //Application.Run(new Activity5.MActivity5_form());
             //Application.Run(new MQUIZ2());
-            Application.Run(new Flesson13());
+            //Application.Run(new Flesson13());
+            //Application.Run(new F3_fcn_lesson13());
+            Application.Run(new F3_class_lesson13());
 
 
 
