@@ -20,7 +20,7 @@ namespace projectNamin
 
         private void quiz1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Pquiz1_form newMDIchild = new Pquiz1_form();
+            Pquiz1_form_replica newMDIchild = new Pquiz1_form_replica();
             newMDIchild.MdiParent = this;
             newMDIchild.Show();
         }
@@ -41,7 +41,7 @@ namespace projectNamin
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoginFrm1 newmdi = new LoginFrm1();
+            A_LoginFrm1 newmdi = new A_LoginFrm1();
             this.Hide();
             newmdi.ShowDialog();
             this.Close();

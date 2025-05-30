@@ -178,7 +178,6 @@
             displayListBox.Name = "displayListBox";
             displayListBox.Size = new Size(192, 169);
             displayListBox.TabIndex = 3;
-            displayListBox.SelectedIndexChanged += displayListBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -201,7 +200,6 @@
             displayPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             displayPictureBox.TabIndex = 5;
             displayPictureBox.TabStop = false;
-            displayPictureBox.Click += pictureBox1_Click;
             // 
             // FoodBundleBradiobtn
             // 
@@ -252,7 +250,6 @@
             discountedAmounttxtBox.Name = "discountedAmounttxtBox";
             discountedAmounttxtBox.Size = new Size(156, 36);
             discountedAmounttxtBox.TabIndex = 10;
-            discountedAmounttxtBox.TextChanged += discountedAmounttxtBox_TextChanged;
             // 
             // totalBillsTxtBox
             // 
@@ -1052,7 +1049,6 @@
             label12.Size = new Size(74, 15);
             label12.TabIndex = 67;
             label12.Text = "Order Image";
-            label12.Click += label12_Click;
             // 
             // exitbtn
             // 

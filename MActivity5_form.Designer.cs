@@ -116,6 +116,7 @@ namespace Activity5
             exit_btn = new Button();
             groupBox8 = new GroupBox();
             payslip_viewListBox = new ListBox();
+            searchbtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -852,6 +853,7 @@ namespace Activity5
             // 
             // pictureBox2
             // 
+            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
             pictureBox2.Location = new Point(625, 6);
             pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
@@ -967,6 +969,15 @@ namespace Activity5
             payslip_viewListBox.Size = new Size(523, 694);
             payslip_viewListBox.TabIndex = 0;
             // 
+            // searchbtn
+            // 
+            searchbtn.Location = new Point(527, 6);
+            searchbtn.Name = "searchbtn";
+            searchbtn.Size = new Size(75, 23);
+            searchbtn.TabIndex = 46;
+            searchbtn.Text = "SEARCH";
+            searchbtn.UseVisualStyleBackColor = true;
+            // 
             // MActivity5_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -974,6 +985,7 @@ namespace Activity5
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(1370, 749);
+            Controls.Add(searchbtn);
             Controls.Add(groupBox8);
             Controls.Add(exit_btn);
             Controls.Add(new_btn);
@@ -1121,5 +1133,6 @@ namespace Activity5
         private Button exit_btn;
         private GroupBox groupBox8;
         public ListBox payslip_viewListBox;
+        private Button searchbtn;
     }
 }

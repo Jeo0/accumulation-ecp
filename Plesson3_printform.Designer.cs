@@ -38,7 +38,6 @@
             this.printDisplayListBox.Name = "printDisplayListBox";
             this.printDisplayListBox.Size = new System.Drawing.Size(449, 446);
             this.printDisplayListBox.TabIndex = 4;
-            this.printDisplayListBox.SelectedIndexChanged += new System.EventHandler(this.printDisplayListBox_SelectedIndexChanged);
             // 
             // Activity4_PrintFrms
             // 

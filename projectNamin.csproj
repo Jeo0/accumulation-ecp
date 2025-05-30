@@ -9,6 +9,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="BACKUPS\BACKUP_MActivity5_form_replica.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_MActivity5_form_replica.Designer.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Plesson5_form.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Plesson5_form.Designer.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Plesson5_printform.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Plesson5_printform.Designer.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Pquiz1_form.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BACKUPS\BACKUP_Pquiz1_form.Designer.cs.txt">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="BACKUPS\BACKUP_MActivity5_form_replica.resx.txt" />
+    <EmbeddedResource Include="BACKUPS\BACKUP_Plesson5_form.resx.txt" />
+    <EmbeddedResource Include="BACKUPS\BACKUP_Plesson5_printform.resx.txt" />
+    <EmbeddedResource Include="BACKUPS\BACKUP_Pquiz1_form.resx.txt" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
     <PackageReference Include="AForge" Version="2.2.5" />
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
@@ -16,8 +52,23 @@
     <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.13" />
   </ItemGroup>
 
+  
+
   <ItemGroup>
-    
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
