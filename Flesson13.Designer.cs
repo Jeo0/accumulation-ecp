@@ -96,11 +96,7 @@
             editBtn.Size = new Size(126, 41);
             editBtn.TabIndex = 9;
             editBtn.Text = "Edit";
-<<<<<<< HEAD
-            editBtn.UseVisualStyleBackColor = true;
-=======
             editBtn.UseVisualStyleBackColor = false;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             editBtn.Click += editBtn_Click;
             // 
             // cancelBtn
@@ -112,11 +108,7 @@
             cancelBtn.Size = new Size(126, 41);
             cancelBtn.TabIndex = 10;
             cancelBtn.Text = "Cancel";
-<<<<<<< HEAD
-            cancelBtn.UseVisualStyleBackColor = true;
-=======
             cancelBtn.UseVisualStyleBackColor = false;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             cancelBtn.Click += cancelBtn_Click;
             // 
             // newBtn
@@ -128,11 +120,7 @@
             newBtn.Size = new Size(126, 41);
             newBtn.TabIndex = 11;
             newBtn.Text = "New";
-<<<<<<< HEAD
-            newBtn.UseVisualStyleBackColor = true;
-=======
             newBtn.UseVisualStyleBackColor = false;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             newBtn.Click += newBtn_Click;
             // 
             // deleteBtn
@@ -144,11 +132,7 @@
             deleteBtn.Size = new Size(126, 41);
             deleteBtn.TabIndex = 14;
             deleteBtn.Text = "Delete";
-<<<<<<< HEAD
-            deleteBtn.UseVisualStyleBackColor = true;
-=======
             deleteBtn.UseVisualStyleBackColor = false;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             deleteBtn.Click += deleteBtn_Click;
             // 
             // searchBtn
@@ -160,11 +144,7 @@
             searchBtn.Size = new Size(126, 41);
             searchBtn.TabIndex = 13;
             searchBtn.Text = "Search";
-<<<<<<< HEAD
-            searchBtn.UseVisualStyleBackColor = true;
-=======
             searchBtn.UseVisualStyleBackColor = false;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             searchBtn.Click += searchBtn_Click;
             // 
             // saveBtn
@@ -211,11 +191,7 @@
             // 
             // pictureBox
             // 
-<<<<<<< HEAD
-            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
-=======
             pictureBox.BorderStyle = BorderStyle.Fixed3D;
->>>>>>> 6a91fd49f96e0bd25f89be3d2df3792bb4042d49
             pictureBox.Location = new Point(12, 12);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(352, 426);
