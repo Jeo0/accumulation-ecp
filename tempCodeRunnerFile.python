@@ -1,0 +1,39 @@
+import sympy as sp
+
+def laplace_transform():
+    t = sp.symbols('t')
+    s = sp.symbols('s')
+
+    print("Welcome to the Laplace Transform Calculator!")
+    print("You can enter a function of t. Examples:")
+    print("  - t**2")
+    print("  - sp.exp(-t)")
+    print("  - sp.sin(t)")
+    print("  - 3*t + 5")
+    print("For exponential, trigonometric, and other functions, use 'sp.' prefix like sp.exp, sp.sin, sp.cos etc.")
+    print("Type 'exit' to quit the program.\n")
+
+    while True:
+        user_input = input("Enter function f(t): ")
+
+        if user_input.lower() == 'exit':
+            print("Goodbye! Thanks for using the Laplace Transform Calculator.")
+            break
+
+        try:
+            f_t = sp.sympify(user_input, locals={"t": t, "sp": sp})
+        except (sp.SympifyError, TypeError, SyntaxError):
+            print("Invalid function format. Please try again with a valid mathematical expression.\n")
+            continue
+
+        L_f_t = sp.laplace_transform(f_t, t, s, noconds=True)
+
+        if L_f_t is not None:
+            print(f"Laplace Transform of f(t) = {f_t} is:")
+            print(L_f_t)
+            print("")
+        else:
+            print("The Laplace Transform does not exist for the given function.\n")
+
+if __name__ == "__main__":
+    laplace_transform()
