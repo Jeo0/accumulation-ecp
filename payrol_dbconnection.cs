@@ -23,8 +23,8 @@ namespace projectNamin
             //codes to establish connection from C# forms to the SQL Server database
             payrol_sql_connection = new SqlConnection();
 
-            payrol_connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = POSDB; user id = qwer; password = qwer";
-            //payrol_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            //payrol_connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            payrol_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
 
             payrol_sql_connection = new SqlConnection(payrol_connectionString);
             payrol_sql_connection.ConnectionString = payrol_connectionString;
@@ -39,24 +39,44 @@ namespace projectNamin
         {
             payrol_sql_dataadapter = new SqlDataAdapter();
             payrol_sql_dataadapter.SelectCommand = payrol_sql_command;
+            if (payrol_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_command.Connection.Open();
+            }
+
             payrol_sql_command.ExecuteNonQuery();
         }
         public void payrol_sqladapterInsert()//public function codes for mediating between C# language and the MSSQL INSERT command
         {
             payrol_sql_dataadapter = new SqlDataAdapter();
             payrol_sql_dataadapter.InsertCommand = payrol_sql_command;
+            if (payrol_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_command.Connection.Open();
+            }
+
             payrol_sql_command.ExecuteNonQuery();
         }
         public void payrol_sqladapterDelete()//public function codes for mediating between C# language and the MSSQL DELETE command
         {
             payrol_sql_dataadapter = new SqlDataAdapter();
             payrol_sql_dataadapter.DeleteCommand = payrol_sql_command;
+            if (payrol_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_command.Connection.Open();
+            }
+
             payrol_sql_command.ExecuteNonQuery();
         }
         public void payrol_sqladapterUpdate()//public function codes for mediating between C# language and the MSSQL UPDATE command
         {
             payrol_sql_dataadapter = new SqlDataAdapter();
             payrol_sql_dataadapter.UpdateCommand = payrol_sql_command;
+            if (payrol_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_command.Connection.Open();
+            }
+
             payrol_sql_command.ExecuteNonQuery();
         }
         public void payrol_sqldatasetSELECT()//codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio

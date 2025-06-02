@@ -24,8 +24,8 @@ namespace projectNamin
             //codes to establish a connection from C# forms to the SQL Server database
             employee_sql_connection = new SqlConnection();
 
-            employee_connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = POSDB; user id = qwer; password = qwer";
-            //employee_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            //employee_connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            employee_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
 
             employee_sql_connection = new SqlConnection(employee_connectionString);
             employee_sql_connection.ConnectionString = employee_connectionString;
@@ -41,24 +41,49 @@ namespace projectNamin
         {
             employee_sql_dataadapter = new SqlDataAdapter();
             employee_sql_dataadapter.SelectCommand = employee_sql_command;
+            // Make sure the connection is open
+            if (employee_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                employee_sql_command.Connection.Open();
+            }
+
             employee_sql_command.ExecuteNonQuery();
         }
         public void employee_sqladapterInsert()//public function codes for mediating between C# language and the MSSQL INSERT command
         {
             employee_sql_dataadapter = new SqlDataAdapter();
             employee_sql_dataadapter.InsertCommand = employee_sql_command;
+
+            // Make sure the connection is open
+            if (employee_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                employee_sql_command.Connection.Open();
+            }
+
             employee_sql_command.ExecuteNonQuery();
         }
         public void employee_sqladapterDelete()//public function codes for mediating between C# language and the MSSQL DELETE command
         {
             employee_sql_dataadapter = new SqlDataAdapter();
             employee_sql_dataadapter.DeleteCommand = employee_sql_command;
+            // Make sure the connection is open
+            if (employee_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                employee_sql_command.Connection.Open();
+            }
+
             employee_sql_command.ExecuteNonQuery();
         }
         public void employee_sqladapterUpdate()//public function codes for mediating between C# language and the MSSQL UPDATE command
         {
             employee_sql_dataadapter = new SqlDataAdapter();
             employee_sql_dataadapter.UpdateCommand = employee_sql_command;
+            // Make sure the connection is open
+            if (employee_sql_command.Connection.State == ConnectionState.Closed)
+            {
+                employee_sql_command.Connection.Open();
+            }
+
             employee_sql_command.ExecuteNonQuery();
         }
         public void employee_sqldatasetSELECT()//codes for mirroring the contents of the database inside the MSSQL going to C# or Visual Studio

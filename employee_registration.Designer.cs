@@ -60,7 +60,11 @@
             picpathtxtbox = new TextBox();
             pictureBox1 = new PictureBox();
             groupBox2 = new GroupBox();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
             label37 = new Label();
+            yearstxtbox = new TextBox();
             label36 = new Label();
             label35 = new Label();
             label34 = new Label();
@@ -103,9 +107,10 @@
             label16 = new Label();
             subditxtbox = new TextBox();
             label17 = new Label();
-            yearstxtbox = new TextBox();
             label18 = new Label();
             groupBox3 = new GroupBox();
+            dateTimePicker5 = new DateTimePicker();
+            dateTimePicker4 = new DateTimePicker();
             label48 = new Label();
             label47 = new Label();
             label46 = new Label();
@@ -135,11 +140,6 @@
             addBtn = new Button();
             dataGridView1 = new DataGridView();
             openFileDialog1 = new OpenFileDialog();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
-            dateTimePicker5 = new DateTimePicker();
             PersonalInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
@@ -408,6 +408,7 @@
             searchBtn.TabIndex = 3;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = false;
+            searchBtn.Click += searchBtn_Click;
             // 
             // browseBtn
             // 
@@ -419,6 +420,7 @@
             browseBtn.TabIndex = 2;
             browseBtn.Text = "Browse";
             browseBtn.UseVisualStyleBackColor = false;
+            browseBtn.Click += browseBtn_Click;
             // 
             // picpathtxtbox
             // 
@@ -433,8 +435,10 @@
             pictureBox1.Location = new Point(64, 45);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(220, 169);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // groupBox2
             // 
@@ -442,6 +446,7 @@
             groupBox2.Controls.Add(dateTimePicker2);
             groupBox2.Controls.Add(dateTimePicker1);
             groupBox2.Controls.Add(label37);
+            groupBox2.Controls.Add(yearstxtbox);
             groupBox2.Controls.Add(label36);
             groupBox2.Controls.Add(label35);
             groupBox2.Controls.Add(label34);
@@ -484,7 +489,6 @@
             groupBox2.Controls.Add(label16);
             groupBox2.Controls.Add(subditxtbox);
             groupBox2.Controls.Add(label17);
-            groupBox2.Controls.Add(yearstxtbox);
             groupBox2.Controls.Add(label18);
             groupBox2.Location = new Point(383, 12);
             groupBox2.Name = "groupBox2";
@@ -492,6 +496,27 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Educational Information and Address";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(134, 665);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(186, 23);
+            dateTimePicker3.TabIndex = 75;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(134, 514);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(186, 23);
+            dateTimePicker2.TabIndex = 74;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(134, 389);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(186, 23);
+            dateTimePicker1.TabIndex = 73;
             // 
             // label37
             // 
@@ -501,6 +526,13 @@
             label37.Size = new Size(54, 15);
             label37.TabIndex = 72;
             label37.Text = "Award/s:";
+            // 
+            // yearstxtbox
+            // 
+            yearstxtbox.Location = new Point(134, 31);
+            yearstxtbox.Name = "yearstxtbox";
+            yearstxtbox.Size = new Size(146, 23);
+            yearstxtbox.TabIndex = 30;
             // 
             // label36
             // 
@@ -843,13 +875,6 @@
             label17.TabIndex = 31;
             label17.Text = "House Number:";
             // 
-            // yearstxtbox
-            // 
-            yearstxtbox.Location = new Point(134, 32);
-            yearstxtbox.Name = "yearstxtbox";
-            yearstxtbox.Size = new Size(146, 23);
-            yearstxtbox.TabIndex = 30;
-            // 
             // label18
             // 
             label18.AutoSize = true;
@@ -888,6 +913,20 @@
             groupBox3.Size = new Size(609, 261);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
+            // 
+            // dateTimePicker5
+            // 
+            dateTimePicker5.Location = new Point(423, 105);
+            dateTimePicker5.Name = "dateTimePicker5";
+            dateTimePicker5.Size = new Size(146, 23);
+            dateTimePicker5.TabIndex = 91;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Location = new Point(113, 137);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(146, 23);
+            dateTimePicker4.TabIndex = 76;
             // 
             // label48
             // 
@@ -1081,6 +1120,7 @@
             exitBtn.TabIndex = 35;
             exitBtn.Text = "EXIT";
             exitBtn.UseVisualStyleBackColor = false;
+            exitBtn.Click += exitBtn_Click;
             // 
             // cancelBtn
             // 
@@ -1092,6 +1132,7 @@
             cancelBtn.TabIndex = 34;
             cancelBtn.Text = "CANCEL";
             cancelBtn.UseVisualStyleBackColor = false;
+            cancelBtn.Click += cancelBtn_Click;
             // 
             // newBtn
             // 
@@ -1103,6 +1144,7 @@
             newBtn.TabIndex = 33;
             newBtn.Text = "NEW";
             newBtn.UseVisualStyleBackColor = false;
+            newBtn.Click += newBtn_Click;
             // 
             // deleteBtn
             // 
@@ -1114,6 +1156,7 @@
             deleteBtn.TabIndex = 32;
             deleteBtn.Text = "DELETE";
             deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // editBtn
             // 
@@ -1125,6 +1168,7 @@
             editBtn.TabIndex = 31;
             editBtn.Text = "EDIT";
             editBtn.UseVisualStyleBackColor = false;
+            editBtn.Click += editBtn_Click;
             // 
             // addBtn
             // 
@@ -1136,6 +1180,7 @@
             addBtn.TabIndex = 30;
             addBtn.Text = "ADD";
             addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += addBtn_Click;
             // 
             // dataGridView1
             // 
@@ -1149,41 +1194,6 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(134, 389);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(186, 23);
-            dateTimePicker1.TabIndex = 73;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(134, 514);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(186, 23);
-            dateTimePicker2.TabIndex = 74;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.Location = new Point(134, 665);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(186, 23);
-            dateTimePicker3.TabIndex = 75;
-            // 
-            // dateTimePicker4
-            // 
-            dateTimePicker4.Location = new Point(113, 137);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(146, 23);
-            dateTimePicker4.TabIndex = 76;
-            // 
-            // dateTimePicker5
-            // 
-            dateTimePicker5.Location = new Point(423, 105);
-            dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(146, 23);
-            dateTimePicker5.TabIndex = 91;
-            // 
             // employee_registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1195,6 +1205,7 @@
             Controls.Add(PersonalInformation);
             Name = "employee_registration";
             Text = "employee_registration";
+            Load += employee_registration_Load;
             PersonalInformation.ResumeLayout(false);
             PersonalInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1251,7 +1262,6 @@
         private Label label16;
         private TextBox subditxtbox;
         private Label label17;
-        private TextBox yearstxtbox;
         private Label label18;
         private Label label24;
         private Label label25;
@@ -1321,5 +1331,6 @@
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker5;
         private DateTimePicker dateTimePicker4;
+        private TextBox yearstxtbox;
     }
 }

@@ -37,7 +37,9 @@ namespace projectNamin
             //Application.Run(new F3_fcn_lesson13());
             //Application.Run(new F3_class_lesson13());
             //Application.Run(new Proj_pos1());
-            Application.Run(new Proj_pos2());
+            //Application.Run(new Proj_pos2());
+            //Application.Run(new employee_registration());
+            Application.Run(new Payroll());
 
 
 

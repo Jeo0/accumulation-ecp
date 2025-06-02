@@ -115,8 +115,12 @@ namespace Activity5
             new_btn = new Button();
             exit_btn = new Button();
             groupBox8 = new GroupBox();
+            dataGridView1 = new DataGridView();
             payslip_viewListBox = new ListBox();
             searchbtn = new Button();
+            saveBtn = new Button();
+            editBtn = new Button();
+            deleteBtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -126,6 +130,7 @@ namespace Activity5
             groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -956,13 +961,13 @@ namespace Activity5
             // 
             // exit_btn
             // 
-            exit_btn.BackColor = Color.Teal;
+            exit_btn.BackColor = Color.FromArgb(255, 128, 128);
             exit_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             exit_btn.ForeColor = SystemColors.ButtonFace;
             exit_btn.Location = new Point(708, 708);
             exit_btn.Margin = new Padding(4, 3, 4, 3);
             exit_btn.Name = "exit_btn";
-            exit_btn.Size = new Size(108, 28);
+            exit_btn.Size = new Size(88, 28);
             exit_btn.TabIndex = 44;
             exit_btn.Text = "EXIT";
             exit_btn.UseVisualStyleBackColor = false;
@@ -970,15 +975,24 @@ namespace Activity5
             // 
             // groupBox8
             // 
+            groupBox8.Controls.Add(dataGridView1);
             groupBox8.Controls.Add(payslip_viewListBox);
             groupBox8.Location = new Point(822, 6);
             groupBox8.Margin = new Padding(4, 3, 4, 3);
             groupBox8.Name = "groupBox8";
             groupBox8.Padding = new Padding(4, 3, 4, 3);
-            groupBox8.Size = new Size(536, 732);
+            groupBox8.Size = new Size(536, 697);
             groupBox8.TabIndex = 45;
             groupBox8.TabStop = false;
             groupBox8.Text = "groupBox8";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(7, 423);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(522, 226);
+            dataGridView1.TabIndex = 1;
             // 
             // payslip_viewListBox
             // 
@@ -987,7 +1001,7 @@ namespace Activity5
             payslip_viewListBox.Location = new Point(6, 29);
             payslip_viewListBox.Margin = new Padding(4, 3, 4, 3);
             payslip_viewListBox.Name = "payslip_viewListBox";
-            payslip_viewListBox.Size = new Size(523, 694);
+            payslip_viewListBox.Size = new Size(523, 379);
             payslip_viewListBox.TabIndex = 0;
             // 
             // searchbtn
@@ -1001,6 +1015,49 @@ namespace Activity5
             searchbtn.TabIndex = 46;
             searchbtn.Text = "SEARCH";
             searchbtn.UseVisualStyleBackColor = false;
+            searchbtn.Click += searchbtn_Click;
+            // 
+            // saveBtn
+            // 
+            saveBtn.BackColor = Color.Teal;
+            saveBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            saveBtn.ForeColor = SystemColors.ButtonFace;
+            saveBtn.Location = new Point(804, 708);
+            saveBtn.Margin = new Padding(4, 3, 4, 3);
+            saveBtn.Name = "saveBtn";
+            saveBtn.Size = new Size(88, 28);
+            saveBtn.TabIndex = 47;
+            saveBtn.Text = "SAVE";
+            saveBtn.UseVisualStyleBackColor = false;
+            saveBtn.Click += saveBtn_Click;
+            // 
+            // editBtn
+            // 
+            editBtn.BackColor = Color.Teal;
+            editBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            editBtn.ForeColor = SystemColors.ButtonFace;
+            editBtn.Location = new Point(900, 708);
+            editBtn.Margin = new Padding(4, 3, 4, 3);
+            editBtn.Name = "editBtn";
+            editBtn.Size = new Size(88, 28);
+            editBtn.TabIndex = 48;
+            editBtn.Text = "EDIT";
+            editBtn.UseVisualStyleBackColor = false;
+            editBtn.Click += editBtn_Click;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.BackColor = Color.Teal;
+            deleteBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            deleteBtn.ForeColor = SystemColors.ButtonFace;
+            deleteBtn.Location = new Point(996, 708);
+            deleteBtn.Margin = new Padding(4, 3, 4, 3);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(88, 28);
+            deleteBtn.TabIndex = 49;
+            deleteBtn.Text = "DELETE";
+            deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // Payroll
             // 
@@ -1009,6 +1066,9 @@ namespace Activity5
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(1370, 749);
+            Controls.Add(deleteBtn);
+            Controls.Add(editBtn);
+            Controls.Add(saveBtn);
             Controls.Add(searchbtn);
             Controls.Add(groupBox8);
             Controls.Add(exit_btn);
@@ -1067,6 +1127,7 @@ namespace Activity5
             groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -1158,5 +1219,9 @@ namespace Activity5
         private GroupBox groupBox8;
         public ListBox payslip_viewListBox;
         private Button searchbtn;
+        private Button saveBtn;
+        private Button editBtn;
+        private Button deleteBtn;
+        private DataGridView dataGridView1;
     }
 }

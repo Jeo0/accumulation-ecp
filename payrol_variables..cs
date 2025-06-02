@@ -8,6 +8,7 @@ namespace projectNamin
 {
     class payrol_variables
     {
+        public string picpath;
         public double tax;
         public Double basic_netincome = 0.00,
                         basic_numhrs = 0.00,
