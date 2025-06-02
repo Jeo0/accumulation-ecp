@@ -36,10 +36,19 @@ namespace projectNamin
             //Application.Run(new Flesson13());
             //Application.Run(new F3_fcn_lesson13());
             //Application.Run(new F3_class_lesson13());
+
+            Application.Run(new POS_Admin());
             //Application.Run(new Proj_pos1());
             //Application.Run(new Proj_pos2());
             //Application.Run(new employee_registration());
-            Application.Run(new Payroll());
+            //Application.Run(new Payroll());
+
+
+            //Application.Run(new _6_employee_reports());
+            //Application.Run(new _7_payrol_reports());
+            // Application.Run(new _8_sales_report());
+            //Application.Run(new _9_user_account());
+
 
 
 

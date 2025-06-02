@@ -23,52 +23,9 @@ namespace Activity5 {
             payroldb_connect.payrol_connString();
             InitializeComponent();
         }
-        public void ctlearextboxes()
-        {
-            // Clear all textboxes
-            basic_rateTxtbox.Clear();
-            basic_numhrsTxtbox.Clear();
-            basic_netincomeTxtbox.Clear();
-            hono_rateTxtbox.Clear();
-            hono_numhrsTxtbox.Clear();
-            hono_netincomeTxtbox.Clear();
-            other_rateTxtbox.Clear();
-            other_numhrsTxtbox.Clear();
-            other_netincomeTxtbox.Clear();
-
-            sss_contribTxtbox.Clear();
-            philhealth_contribTxtbox.Clear();
-            pagibig_contribTxtbox.Clear();
-            tax_contribTxtbox.Clear();
-
-            sss_loanTxtbox.Clear();
-            pagibig_loanTxtbox.Clear();
-            FSD_depositTxtbox.Clear();
-            FS_loanTxtbox.Clear();
-            sal_loanTxtbox.Clear();
-
-            // Clear combo box text
-            others_loanCombo.Text = ""; // or others_loanCombo.SelectedIndex = -1;
-
-            total_deducTxtbox.Clear();
-            gross_incomeTxtbox.Clear();
-            net_incomeTxtbox.Clear();
-
-            emp_nuTxtbox.Clear();
-            firstnameTxtbox.Clear();
-            MNameTxtbox.Clear();
-            surTxtbox.Clear();
-            civil_statusTxtbox.Clear();
-            desigTxtbox.Clear();
-            numDependentTxtbox.Clear();
-            empStatusTxtbox.Clear();
-            DeptNameTxtbox.Clear();
-
-            // Reset the date picker
-            paydateDatePicker.Value = DateTime.Today;
-            pictureBox2.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines " +
-                "University\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\default.jpg");
-        }
+        
+           
+        
 
 
         private void Activity5_Load(object sender, EventArgs e)
@@ -144,6 +101,8 @@ namespace Activity5 {
             tax_contribTxtbox.Clear();
             sss_loanTxtbox.Clear();
             pagibig_loanTxtbox.Clear();
+            pictureBox2.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines " +
+               "University\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\default.jpg");
         }
 
         private void tryCatchDouble(object namename)
