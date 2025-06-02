@@ -74,6 +74,18 @@
     <Compile Update="Fin_pos2_printforms.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Payroll_printfrms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Proj_pos2_printfrms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Proj_pos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

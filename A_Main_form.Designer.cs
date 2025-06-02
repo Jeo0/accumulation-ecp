@@ -36,6 +36,7 @@
             example5ToolStripMenuItem = new ToolStripMenuItem();
             accountToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
+            reportsToolStripMenuItem = new ToolStripMenuItem();
             menuStrip2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             // menuStrip2
             // 
-            menuStrip2.Items.AddRange(new ToolStripItem[] { projectsToolStripMenuItem, accountToolStripMenuItem });
+            menuStrip2.Items.AddRange(new ToolStripItem[] { projectsToolStripMenuItem, accountToolStripMenuItem, reportsToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(800, 24);
@@ -67,21 +68,21 @@
             // quiz1ToolStripMenuItem
             // 
             quiz1ToolStripMenuItem.Name = "quiz1ToolStripMenuItem";
-            quiz1ToolStripMenuItem.Size = new Size(271, 22);
+            quiz1ToolStripMenuItem.Size = new Size(270, 22);
             quiz1ToolStripMenuItem.Text = "4JEE Foods Inc POS (Quiz 1)";
             quiz1ToolStripMenuItem.Click += quiz1ToolStripMenuItem_Click;
             // 
             // example3ToolStripMenuItem
             // 
             example3ToolStripMenuItem.Name = "example3ToolStripMenuItem";
-            example3ToolStripMenuItem.Size = new Size(271, 22);
+            example3ToolStripMenuItem.Size = new Size(270, 22);
             example3ToolStripMenuItem.Text = "4JEE Foods Ordering POS (Example 3)";
             example3ToolStripMenuItem.Click += example3ToolStripMenuItem_Click;
             // 
             // example5ToolStripMenuItem
             // 
             example5ToolStripMenuItem.Name = "example5ToolStripMenuItem";
-            example5ToolStripMenuItem.Size = new Size(271, 22);
+            example5ToolStripMenuItem.Size = new Size(270, 22);
             example5ToolStripMenuItem.Text = "SSS Contribution (Example 5)";
             example5ToolStripMenuItem.Click += example5ToolStripMenuItem_Click;
             // 
@@ -98,6 +99,12 @@
             logoutToolStripMenuItem.Size = new Size(180, 22);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
+            // 
+            // reportsToolStripMenuItem
+            // 
+            reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            reportsToolStripMenuItem.Size = new Size(59, 20);
+            reportsToolStripMenuItem.Text = "Reports";
             // 
             // A_Main_form
             // 
@@ -126,5 +133,6 @@
         private ToolStripMenuItem example5ToolStripMenuItem;
         private ToolStripMenuItem accountToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
+        private ToolStripMenuItem reportsToolStripMenuItem;
     }
 }

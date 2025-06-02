@@ -81,6 +81,10 @@ namespace projectNamin
         {
             try
             {
+                for (int i = 1; i <= 10; i++)
+                {
+                    pos_id_comboBox.Items.Add(i.ToString());
+                }
                 picpathTxtbox1.Hide(); picpathTxtbox2.Hide();
                 picpathTxtbox3.Hide(); picpathTxtbox4.Hide();
                 picpathTxtbox5.Hide(); picpathTxtbox6.Hide();

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +18,9 @@ namespace projectNamin
 {
     public partial class F3_class_lesson13 : Form
     {
-        String picpath;//a string variable use to hold the location of the image inside the table
+        String picpath; //a string variable use to hold the location of the image inside the table
+        string rootFolder = "I:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\";
+
         db_connection db_connect = new db_connection();
         public F3_class_lesson13()
         {
@@ -37,9 +38,11 @@ namespace projectNamin
             departmentTxtBox.Clear();
             //code for assigning the cursor to be inside the student number textbox
             studentNumTxtBox.Focus();
+
             //code for setting an image inside the picturebox
-            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
-                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            // pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+            //     "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "Default.jpg");
         }
         private void F3_class_lesson13_Load(object sender, EventArgs e)
         {
@@ -58,12 +61,15 @@ namespace projectNamin
             dataGridView.DataSource = db_connect.sql_dataset.Tables[0];
             //connection.Close();//code for closing the C# form connection to the database
 
+            pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "Default.jpg");
+
         }
 
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            db_connect.sql = "INSERT INTO studentTbl (student_id, student_name, department, picpath) VALUES('" + studentNumTxtBox.Text + "', '" + studentNameTxtBox.Text + "', '" + departmentTxtBox.Text + "', '" + picturepathTxtBox.Text + "')";
+            db_connect.sql = "INSERT INTO studentTbl (student_id, student_name, department, picpath) VALUES('" + studentNumTxtBox.Text + "', '"
+                + studentNameTxtBox.Text + "', '" + departmentTxtBox.Text + "', '" + picturepathTxtBox.Text + "')";
             db_connect.cmd();
             db_connect.sqladapterInsert();
             db_connect.sql = "SELECT * FROM studentTbl";
@@ -93,7 +99,7 @@ namespace projectNamin
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             db_connect.sql = "DELETE FROM studentTbl WHERE student_id = '" +
- studentNumTxtBox.Text + "'";
+                 studentNumTxtBox.Text + "'";
             db_connect.cmd();
             db_connect.sqladapterDelete();
             db_connect.sql = "SELECT * FROM studentTbl";
@@ -106,7 +112,8 @@ namespace projectNamin
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            db_connect.sql = "UPDATE studentTBL SET student_name = '" + studentNameTxtBox.Text + "', department = '" + departmentTxtBox.Text + "', picpath = '" + picturepathTxtBox.Text + "' WHERE student_id = '" + studentNumTxtBox.Text + "'";
+            db_connect.sql = "UPDATE studentTBL SET student_name = '" + studentNameTxtBox.Text + "', department = '" + departmentTxtBox.Text + "', picpath = '"
+                + picturepathTxtBox.Text + "' WHERE student_id = '" + studentNumTxtBox.Text + "'";
             db_connect.cmd();
             db_connect.sqladapterUpdate();
             db_connect.sql = "SELECT * FROM studentTbl";
@@ -120,8 +127,9 @@ namespace projectNamin
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
-                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            // pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+            //     "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "Default.jpg");
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
@@ -130,8 +138,9 @@ namespace projectNamin
 
         private void newBtn_Click(object sender, EventArgs e)
         {
-            pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
-                "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            // pictureBox.Image = System.Drawing.Image.FromFile("C:\\Users\\Jude\\OneDrive - Lyceum of the Philippines University" +
+            //     "\\Documents\\MIDTERMS_ECP_ERALDO_GUARINO\\accumulation-ecp-main-updated\\images\\Default.jpg");
+            pictureBox.Image = System.Drawing.Image.FromFile(rootFolder + "Default.jpg");
             studentNumTxtBox.Clear();
             studentNameTxtBox.Clear();
             departmentTxtBox.Clear();
