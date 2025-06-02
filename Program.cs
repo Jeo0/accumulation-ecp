@@ -16,6 +16,7 @@ namespace projectNamin
             // To customize application configuration such as set high DPI settings or default font,  
             // see https://aka.ms/applicationconfiguration.  
             ApplicationConfiguration.Initialize();
+
             //Application.Run(new Plesson3_form());
             //Application.Run(new Pquiz1_form());    
 
@@ -34,7 +35,9 @@ namespace projectNamin
             //Application.Run(new MQUIZ2());
             //Application.Run(new Flesson13());
             //Application.Run(new F3_fcn_lesson13());
-            Application.Run(new F3_class_lesson13());
+            //Application.Run(new F3_class_lesson13());
+            //Application.Run(new Proj_pos1());
+            Application.Run(new Proj_pos2());
 
 
 
