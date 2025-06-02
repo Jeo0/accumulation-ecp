@@ -775,26 +775,27 @@ namespace Activity5 {
         private void saveBtn_Click(object sender, EventArgs e)
         {
             payroldb_connect.payrol_sql =
-            "INSERT INTO payrolTbl (" +
-            "[basic_rate_hr], [basic_no_of_hrs_cutOff], [basic_income_per_cutOff], " +
-            "[honorarium_rate_hr], [honorarium_no_of_hrs_cutOff], [honorarium_income_per_cutOff], " +
-            "[other_rate_hr], [other_no_of_hrs_cutOff], [other_income_per_cutOff], " +
-            "[sss_contrib], [philhealth_contrib], [pagibig_contrib], [tax_contrib], " +
-            "[sss_loan], [pagibig_loan], [fac_savings_deposit], [fac_savings_loan], [salary_loan], [other_loans], " +
-            "[total_deductions], [gross_income], [net_income], [emp_id], [pay_date], " +
-            "[firstname], [middlename], [surname], [civil_status], [designation], [num_of_dependents], [employee_status], [department]) " +
-            "VALUES ('" +
-            basic_rateTxtbox.Text + "', '" + basic_numhrsTxtbox.Text + "', '" + basic_netincomeTxtbox.Text + "', '" +
-            hono_rateTxtbox.Text + "', '" + hono_numhrsTxtbox.Text + "', '" + hono_netincomeTxtbox.Text + "', '" +
-            other_rateTxtbox.Text + "', '" + other_numhrsTxtbox.Text + "', '" + other_netincomeTxtbox.Text + "', '" +
-            sss_contribTxtbox.Text + "', '" + philhealth_contribTxtbox.Text + "', '" + pagibig_contribTxtbox.Text + "', '" + tax_contribTxtbox.Text + "', '" +
-            sss_loanTxtbox.Text + "', '" + pagibig_loanTxtbox.Text + "', '" + FSD_depositTxtbox.Text + "', '" +
-            FS_loanTxtbox.Text + "', '" + sal_loanTxtbox.Text + "', '" + others_loanCombo.Text + "', '" +
-            total_deducTxtbox.Text + "', '" + gross_incomeTxtbox.Text + "', '" + net_incomeTxtbox.Text + "', '" +
-            emp_nuTxtbox.Text + "', '" + paydateDatePicker.Value.ToString("yyyy-MM-dd") + "', '" +
-            firstnameTxtbox.Text + "', '" + MNameTxtbox.Text + "', '" + surTxtbox.Text + "', '" +
-            civil_statusTxtbox.Text + "', '" + desigTxtbox.Text + "', '" + numDependentTxtbox.Text + "', '" +
-            empStatusTxtbox.Text + "', '" + DeptNameTxtbox.Text + "')";
+             "INSERT INTO payrolTbl (" +
+             "[basic_rate_hr], [basic_no_of_hrs_cutOff], [basic_income_per_cutOff], " +
+             "[honorarium_rate_hr], [honorarium_no_of_hrs_cutOff], [honorarium_income_per_cutOff], " +
+             "[other_rate_hr], [other_no_of_hrs_cutOff], [other_income_per_cutOff], " +
+             "[sss_contrib], [philhealth_contrib], [pagibig_contrib], [tax_contrib], " +
+             "[sss_loan], [pagibig_loan], [fac_savings_deposit], [fac_savings_loan], [salary_loan], [other_loans], " +
+             "[total_deductions], [gross_income], [net_income], [emp_id], [pay_date], " +
+             "[firstname], [middlename], [surname], [civil_status], [designation], [num_of_dependents], [employee_status], [department], [picpath]) " +
+             "VALUES ('" +
+             basic_rateTxtbox.Text + "', '" + basic_numhrsTxtbox.Text + "', '" + basic_netincomeTxtbox.Text + "', '" +
+             hono_rateTxtbox.Text + "', '" + hono_numhrsTxtbox.Text + "', '" + hono_netincomeTxtbox.Text + "', '" +
+             other_rateTxtbox.Text + "', '" + other_numhrsTxtbox.Text + "', '" + other_netincomeTxtbox.Text + "', '" +
+             sss_contribTxtbox.Text + "', '" + philhealth_contribTxtbox.Text + "', '" + pagibig_contribTxtbox.Text + "', '" + tax_contribTxtbox.Text + "', '" +
+             sss_loanTxtbox.Text + "', '" + pagibig_loanTxtbox.Text + "', '" + FSD_depositTxtbox.Text + "', '" +
+             FS_loanTxtbox.Text + "', '" + sal_loanTxtbox.Text + "', '" + others_loanCombo.Text + "', '" +
+             total_deducTxtbox.Text + "', '" + gross_incomeTxtbox.Text + "', '" + net_incomeTxtbox.Text + "', '" +
+             emp_nuTxtbox.Text + "', '" + paydateDatePicker.Value.ToString("yyyy-MM-dd") + "', '" +
+             firstnameTxtbox.Text + "', '" + MNameTxtbox.Text + "', '" + surTxtbox.Text + "', '" +
+             civil_statusTxtbox.Text + "', '" + desigTxtbox.Text + "', '" + numDependentTxtbox.Text + "', '" +
+             empStatusTxtbox.Text + "', '" + DeptNameTxtbox.Text + "', '" + picpathTxtbox.Text + "')";
+
 
             payroldb_connect.payrol_cmd();
             payroldb_connect.payrol_sqladapterInsert();
@@ -855,7 +856,8 @@ namespace Activity5 {
             numDependentTxtbox.Text = payroldb_connect.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
             empStatusTxtbox.Text = payroldb_connect.payrol_sql_dataset.Tables[0].Rows[0][31].ToString();
             DeptNameTxtbox.Text = payroldb_connect.payrol_sql_dataset.Tables[0].Rows[0][32].ToString();
-
+            picpathTxtbox.Text = payroldb_connect.payrol_sql_dataset.Tables[0].Rows[0][33].ToString();
+            pictureBox2.Image = System.Drawing.Image.FromFile(picpathTxtbox.Text);
 
         }
 
@@ -897,9 +899,19 @@ namespace Activity5 {
              "total_deductions = '" + total_deducTxtbox.Text + "', " +
              "gross_income = '" + gross_incomeTxtbox.Text + "', " +
              "net_income = '" + net_incomeTxtbox.Text + "', " +
-             "pay_date = '" + paydateDatePicker.Text + "' " +
-
+             "pay_date = '" + paydateDatePicker.Text + "', " +
+             "firstname = '" + firstnameTxtbox.Text + "', " +
+             "middlename = '" + MNameTxtbox.Text + "', " +
+             "surname = '" + surTxtbox.Text + "', " +
+             "civil_status = '" + civil_statusTxtbox.Text + "', " +
+             "designation = '" + desigTxtbox.Text + "', " +
+             "num_of_dependents = '" + numDependentTxtbox.Text + "', " +
+             "employee_status = '" + empStatusTxtbox.Text + "', " +
+             "department = '" + DeptNameTxtbox.Text + "', " +
+             "picpath = '" + picpathTxtbox.Text + "' " +
              "WHERE emp_id = '" + emp_nuTxtbox.Text + "'";
+
+
             payroldb_connect.payrol_cmd();
             payroldb_connect.payrol_sqladapterUpdate();
             payroldb_connect.payrol_sql = "SELECT * FROM payrolTbl";
