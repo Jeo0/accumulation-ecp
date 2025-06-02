@@ -14,6 +14,19 @@ namespace projectNamin
 {
     public partial class _7_payrol_reports : Form
     {
+
+        /// //////////////////////
+        /// //////////////////////
+        /// //////////////////////
+        /// //////////////////////
+        //
+        // activity 7
+        //
+        /// //////////////////////
+        /// //////////////////////
+        /// //////////////////////
+        /// //////////////////////
+
         payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
 
         // just edit this

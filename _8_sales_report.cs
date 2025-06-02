@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace projectNamin
 {
-    public partial class _6_employee_reports : Form
+    public partial class _8_sales_report : Form
     {
         /// //////////////////////
         /// //////////////////////
         /// //////////////////////
         /// //////////////////////
         //
-        // activity 6
+        // activity 8
         //
         /// //////////////////////
         /// //////////////////////
@@ -26,18 +26,14 @@ namespace projectNamin
         /// //////////////////////
 
         payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
-        string gl_whatTable = "pos_empRegTbl";
+        string gl_whatTable = "salesTbl";
         Dictionary<string, string> gl_optionsCombobox = new Dictionary<string, string> {
+            { "product_name", "product_name"},
+            { "price", "product_price" },
+            { "quantity_per_transaction", "product_quantity_per_transaction"},
             { "employee_number", "emp_id" },
-            { "surname", "emp_surname" },
-            { "firstname", "emp_fname" },
-            { "department", "emp_department" },
-            { "designation", "position" },
-            { "zipcode", "add_zipcode" },
-            { "province", "add_state_province" },
-            { "city", "add_city" }
         };
-        public _6_employee_reports()
+        public _8_sales_report()
         {
             payrol_db_connect.payrol_connString();
             InitializeComponent();
@@ -71,7 +67,7 @@ namespace projectNamin
         /// /////////////////////////////////////////////////////////
         /// /////////////////////////////////////////////////////////
         /// /////////////////////////////////////////////////////////
-        private void _6_employee_reports_Load(object sender, EventArgs e)
+        private void _8_sales_report_Load(object sender, EventArgs e)
         {
             payrol_db_connect.payrol_sql = "SELECT * FROM " + gl_whatTable;
             payrol_select();

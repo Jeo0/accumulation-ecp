@@ -102,7 +102,7 @@
             Controls.Add(optionCombo);
             Controls.Add(dataGridView1);
             Name = "_7_payrol_reports";
-            Text = "_7_payrol_reports";
+            Text = "Payrol Reports";
             Load += _7_payrol_reports_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

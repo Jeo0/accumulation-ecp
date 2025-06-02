@@ -1,6 +1,6 @@
 ﻿namespace projectNamin
 {
-    partial class _6_employee_reports
+    partial class _8_sales_report
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             back_button.UseVisualStyleBackColor = true;
             back_button.Click += back_button_Click;
             // 
-            // _6_employee_reports
+            // _8_sales_report
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -101,9 +101,9 @@
             Controls.Add(label1);
             Controls.Add(optionCombo);
             Controls.Add(dataGridView1);
-            Name = "_6_employee_reports";
-            Text = "Employee Reports";
-            Load += _6_employee_reports_Load;
+            Name = "_8_sales_report";
+            Text = "Sales Reports";
+            Load += _8_sales_report_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
