@@ -291,7 +291,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(646, 29);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(152, 115);

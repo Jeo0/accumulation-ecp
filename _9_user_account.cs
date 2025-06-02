@@ -13,7 +13,20 @@ namespace projectNamin
 {
     public partial class _9_user_account : Form
     {
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // /////////////////////////////////////// change this
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        //string default_pic_path = "I:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\Default.jpg";
         string default_pic_path = "I:\\school\\3rdyr\\2ndsem\\ecp\\midterm\\accumulation\\newnew\\projectNamin\\images\\Default.jpg";
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
+        // ///////////////////////////////////////
         useraccount_db_connection useraccount_db_connect = new useraccount_db_connection();
         public _9_user_account()
         {
@@ -31,10 +44,10 @@ namespace projectNamin
             designationTxtbox.Clear();
             picpathTxtbox.Clear();
             usernameTxtbox.Clear();
-            passwordTxtbox.Clear();
-            confirmPasswordTxtbox.Clear();
-            account_statusComboBox.Text = "";
-            accountTypeComboBox.Text = "";
+            passwordTxtbox.Text = "Password";
+            confirmPasswordTxtbox.Text = "Confirm Password";
+            account_statusComboBox.Text = "Select.....";
+            accountTypeComboBox.Text = "Select.....";
             pictureBox1.Image = System.Drawing.Image.FromFile(default_pic_path);
         }
 
@@ -52,8 +65,7 @@ namespace projectNamin
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqladapterSelect();
                 useraccount_db_connect.useraccount_sqldatasetSELECT();
-                dataGridView1.DataSource =
-                useraccount_db_connect.useraccount_sql_dataset.Tables[0];
+                dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
             }
             catch (Exception)
             {
