@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -100,7 +99,7 @@ namespace projectNamin
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             db_connect.sql = "DELETE FROM studentTbl WHERE student_id = '" +
- studentNumTxtBox.Text + "'";
+                 studentNumTxtBox.Text + "'";
             db_connect.cmd();
             db_connect.sqladapterDelete();
             db_connect.sql = "SELECT * FROM studentTbl";

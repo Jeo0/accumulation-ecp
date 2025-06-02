@@ -1,0 +1,133 @@
+select * from INFORMATION_SCHEMA.tables;
+
+-- script for creating database
+create database POSDB;
+-- script for activating and using the database
+use POSDB;
+-- script for creating tables and fields
+
+
+CREATE TABLE payrolTbl ( payrol_id int IDENTITY(1,1) PRIMARY KEY,
+basic_rate_hr varchar(50),
+basic_no_of_hrs_cutOff varchar(50),
+basic_income_per_cutOff varchar(50),
+honorarium_rate_hr varchar(50),
+honorarium_no_of_hrs_cutOff varchar(50),
+honorarium_income_per_cutOff varchar(50),
+other_rate_hr varchar(50),
+other_no_of_hrs_cutOff varchar(50),
+other_income_per_cutOff varchar(50),
+sss_contrib varchar(50),
+philhealth_contrib varchar(50),
+pagibig_contrib varchar(50),
+tax_contrib varchar(50),
+sss_loan varchar(50),
+pagibig_loan varchar(50),
+fac_savings_deposit varchar(50),
+fac_savings_loan varchar(50),
+salary_loan varchar(50),
+other_loans varchar(50),
+total_deductions varchar(50),
+gross_income varchar(50),
+net_income varchar(50),
+emp_id varchar(20),
+pay_date varchar(50));
+
+
+CREATE TABLE salesTbl (transaction_id int IDENTITY(1,1) PRIMARY KEY,
+product_name varchar(100),
+product_price varchar(50),
+product_quantity_per_transaction varchar(50),
+discount_option varchar(50),
+discount_amount_per_transaction varchar(50),
+discounted_amount_per_transaction varchar(50),
+summary_total_quantity varchar(50),
+summary_total_disc_given varchar(50),
+summary_total_discounted_amount varchar(50),
+terminal_no varchar(50),
+time_date varchar(50),
+emp_id varchar(20));
+
+
+CREATE TABLE pos_empRegTbl (empReg_id int IDENTITY(1,1),
+emp_id varchar(20) PRIMARY KEY,
+emp_fname varchar(100), emp_mname varchar(50),
+emp_surname varchar(100), emp_age int,
+emp_gender varchar(30), emp_sss_no int,
+emp_tin_no int, emp_philhealth_no int,
+emp_pagibig_no int, emp_status varchar(50),
+emp_height varchar(50), emp_weight varchar(50),
+add_yrs_stay int, add_house_no int,
+add_sub_name text, add_phase_no int,
+add_street varchar(100),
+add_barangay varchar(100),
+add_municipality varchar(100),
+add_city varchar(100),
+add_state_province varchar(100),
+add_country varchar(100), add_zipcode int,
+elem_name text, elem_address text,
+elem_yr_grad varchar(50),elem_award varchar(50),
+junior_high_name text, junior_high_address text,
+junior_high_yr_grad varchar(50),
+junior_high_award varchar(50),
+senior_high_name text, senior_high_address text,
+senior_high_yr_grad varchar(50),
+senior_high_award varchar(50),track varchar(50),
+college_school_name text, college_address text,
+college_yr_grad varchar(50),
+college_award varchar(50),
+college_course varchar(100),
+others text, position varchar(50),
+emp_work_status varchar(50),
+emp_date_hired varchar(100),
+emp_department varchar(50),
+emp_no_of_dependents int, picpath text);
+
+
+CREATE TABLE useraccountTbl (useraccount_id int IDENTITY(1,1),
+user_id int PRIMARY KEY,
+account_type varchar(100),
+username varchar(50),
+password varchar(100),
+confirm_password varchar(100),
+user_status varchar(50),
+emp_id varchar(20),
+pos_terminal_no varchar(50));
+
+
+CREATE TABLE pos_nameTbl (name_id int IDENTITY(1,1),
+pos_id varchar(20) PRIMARY KEY,
+name1 varchar(50), name2 varchar(50),
+name3 varchar(50), name4 varchar(50),
+name5 varchar(50), name6 varchar(50),
+name7 varchar(50), name8 varchar(50),
+name9 varchar(50), name10 varchar(50),
+name11 varchar(50), name12 varchar(50),
+name13 varchar(50), name14 varchar(50),
+name15 varchar(50), name16 varchar(50),
+name17 varchar(50), name18 varchar(50),
+name19 varchar(50), name20 varchar(50),
+employee_id varchar(20));
+
+CREATE TABLE pos_picTbl (pic_id int IDENTITY(1,1) PRIMARY KEY,
+pic1 text, pic2 text, pic3 text, pic4 text,
+pic5 text, pic6 text, pic7 text, pic8 text,
+pic9 text, pic10 text, pic11 text, pic12 text,
+pic13 text, pic14 text, pic15 text, pic16 text,
+pic17 text, pic18 text, pic19 text, pic20 text,
+pos_id int);
+
+CREATE TABLE pos_priceTbl (price_id int IDENTITY(1,1) PRIMARY KEY,
+price1 varchar(50), price2 varchar(50),
+price3 varchar(50), price4 varchar(50),
+price5 varchar(50), price6 varchar(50),
+price7 varchar(50), price8 varchar(50),
+price9 varchar(50), price10 varchar(50),
+price11 varchar(50), price12 varchar(50),
+price13 varchar(50), price14 varchar(50),
+price15 varchar(50), price16 varchar(50),
+price17 varchar(50), price18 varchar(50),
+price19 varchar(50), price20 varchar(50),
+pos_id int);
+
+select * from INFORMATION_SCHEMA.tables;
