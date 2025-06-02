@@ -27,7 +27,8 @@ namespace projectNamin
         {
             //codes to establish a connection from C# forms to the SQL Server database
             login_sql_connection = new SqlConnection();
-            login_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            //login_connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = POSDB; user id = qwer; password = qwer";
+            login_connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = POSDB; user id = qwer; password = qwer";
             login_sql_connection = new SqlConnection(login_connectionString);
             login_sql_connection.ConnectionString = login_connectionString;
             login_sql_connection.Open();

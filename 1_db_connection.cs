@@ -20,7 +20,8 @@ namespace projectNamin
         public void connString()//codes to establish connection from C# forms to the SQL Server database
         {
             sql_connection = new SqlConnection();
-            connectionString = connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = SampleDatabaseDB; user id = qwer; password = qwer";
+            //connectionString = connectionString = "Data Source = JUDEE\\SQLEXPRESS; Initial Catalog = SampleDatabaseDB; user id = qwer; password = qwer";
+            connectionString = connectionString = "Data Source = JR\\SEQUEL2022X; Initial Catalog = SampleDatabaseDB; user id = qwer; password = qwer";
             sql_connection = new SqlConnection(connectionString);
             sql_connection.ConnectionString = connectionString;
             sql_connection.Open();
