@@ -46,9 +46,8 @@ namespace projectNamin
 
             //Application.Run(new _6_employee_reports());
             //Application.Run(new _7_payrol_reports());
-            // Application.Run(new _8_sales_report());
-            //Application.Run(new _9_user_account());
-
+            //Application.Run(new _8_sales_report());
+            Application.Run(new _9_user_account());
 
 
 
